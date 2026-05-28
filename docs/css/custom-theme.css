@@ -115,83 +115,84 @@ p, a, span, div, li, ul, ol {
     max-width: 1000px !important;
     margin: 0 auto !important;
 }
+
 /* =========================================
    INTERACTIVE ACADEMIC BIBLIOGRAPHY CARDS
    ========================================= */
 
-/* Turn the native footnote list items into clean cards */
-li[id^="fn:"] {
-    list-style-type: none !important; /* Removes the ugly default numbers */
+/* High-contrast container for each publication block */
+.csl-entry, .bibliography > p, .bibtex-entry {
     background-color: var(--off-white) !important;
     border-left: 4px solid var(--orange) !important;
-    padding: 16px !important;
-    margin-bottom: 16px !important;
+    padding: 18px !important;
+    margin-bottom: 18px !important;
     border-radius: 6px !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-li[id^="fn:"]:hover {
-    transform: translateX(2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+.csl-entry:hover, .bibliography > p:hover {
+    transform: translateX(3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
 }
 
-/* Ensure the wrapper paragraph doesn't add stray margins */
-li[id^="fn:"] p {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Container holding our clean summary line */
+/* Header summary container */
 .bib-toggle-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     cursor: pointer;
-    gap: 15px;
+    gap: 20px;
     user-select: none;
 }
 
+/* BIGGER FONT: Main paper title styling */
 .bib-summary-text {
-    font-weight: bold;
-    color: var(--gray-dark);
+    font-size: 1.25rem; 
+    font-weight: 700;
+    color: var(--orange) !important;
+    line-height: 1.4;
 }
 
-/* Interactive orange badge button */
+/* Accent element for the publication year */
+.bib-summary-year {
+    color: var(--gray);
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-left: 6px;
+}
+
+/* Expansion action badge */
 .bib-badge {
     background-color: var(--gray-light);
     color: var(--orange);
     font-size: 0.75rem;
-    padding: 4px 10px;
+    padding: 6px 12px;
     border-radius: 4px;
     font-weight: bold;
     white-space: nowrap;
     border: 1px solid var(--orange-light);
+    cursor: pointer;
     transition: all 0.2s ease;
 }
 
-li[id^="fn:"]:hover .bib-badge {
+.csl-entry:hover .bib-badge, .bibliography > p:hover .bib-badge {
     background-color: var(--orange);
     color: #ffffff;
 }
 
-/* Hidden drawer containing full details and links */
+/* SMALLER FONT: Collapsible multi-line metadata block */
 .bib-expanded-details {
     display: none;
-    margin-top: 12px;
-    padding-top: 12px;
+    margin-top: 14px;
+    padding-top: 14px;
     border-top: 1px dashed var(--gray-light);
-    font-size: 0.9rem;
+    font-size: 0.85rem;   /* Smaller detailed view font */
     line-height: 1.6;
-    color: var(--gray);
+    color: var(--gray-dark);
 }
 
 .bib-expanded-details a {
     color: var(--orange) !important;
     text-decoration: underline !important;
-}
-
-/* Hide the duplicate footnote return arrow inside the expanded view */
-.bib-expanded-details .footnote-backref {
-    display: none !important;
 }
