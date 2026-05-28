@@ -116,18 +116,3 @@ p, a, span, div, li, ul, ol {
     max-width: 1000px !important;
     margin: 0 auto !important;
 }
-
-.coordinator-section p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.coordinator-section img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-    flex-shrink: 0;
-}
