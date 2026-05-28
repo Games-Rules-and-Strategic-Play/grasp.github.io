@@ -1,52 +1,25 @@
-<div class="partitiongames-container">
-<div class="container">
-<main>
-
-<div class="hero">
-<h1>Play</h1>
-</div>
-
 <iframe 
     src="https://partitiongames.netlify.app/" 
-    style="width: 100%; height: 70vh; border: none; background: transparent;" 
+    style="width: 100vw; height: 100vh; border: none; background: transparent; margin: 0; padding: 0; position: fixed; top: 0; left: 0;" 
     allowtransparency="true">
 </iframe>
 
-</main>
-</div>
-</div>
-
 <style>
-.partitiongames-container {
-    background-color: var(--white);
-    color: var(--gray-dark);
+body, html {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
 }
 
-.partitiongames-container .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+.md-container, .md-main, .md-main__inner, .md-content {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
 }
 
-.partitiongames-container main {
-    padding: 40px 0;
-}
-
-.partitiongames-container .hero {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.partitiongames-container .hero h1 {
-    font-size: 32px;
-    font-weight: 700;
-    color: var(--orange);
-    letter-spacing: -0.02em;
-}
-
-.partitiongames-container iframe {
-    max-width: 100%;
-    margin: 0 auto;
-    display: block;
+.md-tabs {
+    position: relative !important;
+    z-index: 10 !important;
 }
 </style>

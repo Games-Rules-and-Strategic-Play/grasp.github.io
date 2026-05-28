@@ -26,7 +26,6 @@ theme:
         name: Switch to light mode
   features:
     - navigation.tabs # Top horizontal menu
-    - navigation.sections # Sidebar groupings
 
 nav:
   - Home: index.md
