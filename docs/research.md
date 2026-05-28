@@ -6,14 +6,6 @@ The Games, Rules, and Strategic Play (GRASP) Lab focuses on the intersection of 
 
 \full_bibliography
 
-# Lab Research & Publications
-
-The Games, Rules, and Strategic Play (GRASP) Lab focuses on the intersection of structural graph theory, combinatorial game theory, and discrete mathematics. Below is the automated index of our research publications.
-
----
-
-\full_bibliography
-
 <!-- Dynamic post-processor script to style entries as expandable short-author elements -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
