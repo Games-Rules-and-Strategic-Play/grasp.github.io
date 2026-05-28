@@ -2,6 +2,7 @@
 
 ## Coordinators
 
+<div class="coordinator-section">
 ![Eric Gottlieb](images/eric_gottlieb.jpg) **[Eric Gottlieb](https://www.rhodes.edu/bio/eric-gottlieb)** (Rhodes College)  
 Eric is a Professor of Mathematics at Rhodes College whose expertise bridges algebraic combinatorics and strategic gameplay. As a recent Fulbright Scholar, he is actively collaborating with the UP FAMNIT team to analyze the computational complexity of combinatorial games on integer partitions.
 
@@ -10,6 +11,7 @@ Matjaž is an Associate Professor at UP FAMNIT working in structural graph theor
 
 ![Peter Muršič](images/peter_mursic.webp) **Peter Muršič** (UP FAMNIT)  
 Peter earned his PhD at Rutgers University with a deep focus on game theory, and he now advances this research at UP FAMNIT. He specializes in the mathematical mechanics behind combinatorial games, dissecting optimal strategies and analyzing complex game structures.
+</div>
 
 ---
 
