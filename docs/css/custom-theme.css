@@ -2,30 +2,28 @@
    FOOLPROOF MKDOCS MATERIAL CUSTOM COLORS
    ========================================= */
 
-/* Force Light Mode Colors */
-[data-md-color-primary="custom"] {
-    --md-primary-fg-color:        #FF6B35;
-    --md-primary-fg-color--light: #FF8757;
-    --md-primary-fg-color--dark:  #E55A2B;
-    --md-primary-bg-color:        #FFFFFF;
-}
-[data-md-color-accent="custom"] {
-    --md-accent-fg-color:         #FF6B35;
-    --md-accent-fg-color--transparent: rgba(255, 107, 53, 0.1);
-    --md-accent-bg-color:         #FFFFFF;
+/* Force Light Mode Colors universally */
+[data-md-color-scheme="default"] {
+    --md-primary-fg-color:        #FF6B35 !important;
+    --md-primary-fg-color--light: #FF8757 !important;
+    --md-primary-fg-color--dark:  #E55A2B !important;
+    --md-primary-bg-color:        #FFFFFF !important;
+    
+    --md-accent-fg-color:         #FF6B35 !important;
+    --md-accent-fg-color--transparent: rgba(255, 107, 53, 0.1) !important;
+    --md-accent-bg-color:         #FFFFFF !important;
 }
 
-/* Force Dark Mode (Slate) Colors */
-[data-md-color-scheme="slate"][data-md-color-primary="custom"] {
-    --md-primary-fg-color:        #FF7A47;
-    --md-primary-fg-color--light: #FF9166;
-    --md-primary-fg-color--dark:  #FF5722;
-    --md-primary-bg-color:        #1a1a1a;
-}
-[data-md-color-scheme="slate"][data-md-color-accent="custom"] {
-    --md-accent-fg-color:         #FF7A47;
-    --md-accent-fg-color--transparent: rgba(255, 122, 71, 0.1);
-    --md-accent-bg-color:         #1a1a1a;
+/* Force Dark Mode (Slate) Colors universally */
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color:        #FF7A47 !important;
+    --md-primary-fg-color--light: #FF9166 !important;
+    --md-primary-fg-color--dark:  #FF5722 !important;
+    --md-primary-bg-color:        #1a1a1a !important;
+    
+    --md-accent-fg-color:         #FF7A47 !important;
+    --md-accent-fg-color--transparent: rgba(255, 122, 71, 0.1) !important;
+    --md-accent-bg-color:         #1a1a1a !important;
 }
 
 /* =========================================
@@ -91,10 +89,10 @@ body {
     display: none !important;
 }
 
-/* Remove any inline Material Design styles */
+/* FIXED: Headers now accurately inherit your custom orange color variable */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'JetBrains Mono', 'Source Code Pro', 'Monaco', 'Menlo', monospace !important;
-    color: var(--gray-dark) !important;
+    color: var(--orange) !important;
 }
 
 p, a, span, div, li, ul, ol {
@@ -107,8 +105,9 @@ p, a, span, div, li, ul, ol {
     color: var(--gray-dark) !important;
 }
 
-.md-typeset h1 {
-    color: var(--gray-dark) !important;
+/* FIXED: Prevent content blocks from resetting title color to gray */
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+    color: var(--orange) !important;
 }
 
 /* Adjust content width when sidebar is hidden */
