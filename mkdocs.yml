@@ -33,3 +33,6 @@ plugins:
 
 markdown_extensions:
   - footnotes
+
+extra_css:
+  - custom-theme.css

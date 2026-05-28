@@ -1,0 +1,102 @@
+/* Custom theme matching partitiongames.netlify.app */
+:root {
+  --bg-primary: #0f172a;       /* Deep slate/navy background */
+  --bg-secondary: #1e293b;     /* Card & container background */
+  --border-color: #334155;     /* Subtle borders */
+  --text-main: #f8fafc;        /* Off-white primary text */
+  --text-muted: #94a3b8;       /* Muted gray for secondary text */
+  --accent-blue: #3b82f6;      /* Vibrant link & action blue */
+  --accent-hover: #60a5fa;     /* Hover states */
+}
+
+/* Global Reset & Body */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem;
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4 {
+  color: var(--text-main);
+  font-weight: 700;
+  border-bottom: none; /* Removes standard Markdown flat lines */
+}
+
+h1 { font-size: 2.25rem; margin-bottom: 2rem; }
+h2 { font-size: 1.5rem; margin-top: 2rem; color: var(--accent-hover); }
+
+a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Horizontal Rules */
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: 3rem 0;
+}
+
+/* Flexible Layout Adjustments for Team Profile Elements */
+.profile-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid var(--border-color);
+}
+
+.profile-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.profile-text strong {
+  color: var(--text-main);
+  font-size: 1.1rem;
+}
+
+/* Standard Lists (Collaborators Section) */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary);
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-blue);
+  display: inline-block;
+  margin-right: 0.5rem;
+}
