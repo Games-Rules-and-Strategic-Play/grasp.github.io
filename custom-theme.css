@@ -1,102 +1,138 @@
-/* Custom theme matching partitiongames.netlify.app */
+/* Color Scheme & Variables directly from Partition-Games */
 :root {
-  --bg-primary: #0f172a;       /* Deep slate/navy background */
-  --bg-secondary: #1e293b;     /* Card & container background */
-  --border-color: #334155;     /* Subtle borders */
-  --text-main: #f8fafc;        /* Off-white primary text */
-  --text-muted: #94a3b8;       /* Muted gray for secondary text */
-  --accent-blue: #3b82f6;      /* Vibrant link & action blue */
-  --accent-hover: #60a5fa;     /* Hover states */
+    --orange: #FF6B35;
+    --orange-light: #FF8757;
+    --orange-dark: #E55A2B;
+    --white: #FFFFFF;
+    --off-white: #FAFAFA;
+    --gray-light: #F5F5F5;
+    --gray: #666666;
+    --gray-dark: #333333;
+    --black: #000000;
 }
 
-/* Global Reset & Body */
+/* Hardcoded to match their Dark Scheme default state */
+[data-theme="dark"], body.dark-mode {
+    --orange: #FF7A47;
+    --orange-light: #FF9166;
+    --orange-dark: #FF5722;
+    --white: #1a1a1a;
+    --off-white: #222222;
+    --gray-light: #2a2a2a;
+    --gray: #a0a0a0;
+    --gray-dark: #e5e5e5;
+    --black: #ffffff;
+}
+
+/* Global Elements */
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-main);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 2rem;
+    font-family: 'JetBrains Mono', 'Source Code Pro', 'Monaco', 'Menlo', monospace;
+    background-color: var(--white);
+    color: var(--gray-dark);
+    line-height: 1.6;
+    font-size: 14px;
+    padding: 40px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Typography Overrides */
-h1, h2, h3, h4 {
-  color: var(--text-main);
-  font-weight: 700;
-  border-bottom: none; /* Removes standard Markdown flat lines */
+/* Modern Header / Titles with Terminal Accents */
+h1, h2, h3 {
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-h1 { font-size: 2.25rem; margin-bottom: 2rem; }
-h2 { font-size: 1.5rem; margin-top: 2rem; color: var(--accent-hover); }
+h1 {
+    color: var(--orange);
+    font-size: 32px;
+}
+h1::before {
+    content: "# ";
+    color: var(--gray);
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 40px;
+    color: var(--gray-dark);
+}
+h2::before {
+    content: "## ";
+    color: var(--orange);
+}
 
 a {
-  color: var(--accent-blue);
-  text-decoration: none;
-  transition: color 0.2s ease;
+    color: var(--orange);
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
-
 a:hover {
-  color: var(--accent-hover);
-  text-decoration: underline;
+    color: var(--orange-dark);
+    text-decoration: underline;
 }
 
-/* Horizontal Rules */
 hr {
-  border: 0;
-  border-top: 1px solid var(--border-color);
-  margin: 3rem 0;
+    border: 0;
+    border-top: 1px solid var(--gray-light);
+    margin: 40px 0;
 }
 
-/* Flexible Layout Adjustments for Team Profile Elements */
+/* Unified Profile Cards (Reskinning your Team structure) */
 .profile-card {
-  display: flex;
-  align-items: center;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--gray-light);
+    background-color: var(--off-white);
+    padding: 25px;
+    border-radius: 0px; /* Kept blocky and clean like their design */
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .profile-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    border-color: var(--orange-light);
+    background-color: var(--white);
 }
 
 .profile-card img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 1.5rem;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid var(--border-color);
+    width: 110px;
+    height: 110px;
+    border-radius: 50%; /* Kept round to contrast the sharp boxes */
+    margin-right: 25px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--gray-light);
 }
 
 .profile-text {
-  color: var(--text-muted);
-  font-size: 0.95rem;
+    font-size: 13px;
+    color: var(--gray);
+    font-family: "Inter Tight", sans-serif; /* Blends their chosen readable text font */
 }
 
 .profile-text strong {
-  color: var(--text-main);
-  font-size: 1.1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: var(--orange);
 }
 
-/* Standard Lists (Collaborators Section) */
+/* Reskinning the Collaborators List into subtle code-style chips */
 ul {
-  list-style-type: none;
-  padding-left: 0;
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 15px;
 }
 
 ul li {
-  padding: 0.5rem 1rem;
-  background: var(--bg-secondary);
-  margin-bottom: 0.5rem;
-  border-radius: 6px;
-  border-left: 3px solid var(--accent-blue);
-  display: inline-block;
-  margin-right: 0.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--off-white);
+    border: 1px solid var(--gray-light);
+    padding: 10px 15px;
+    font-size: 13px;
+}
+
+ul li::before {
+    content: "- ";
+    color: var(--orange);
 }
