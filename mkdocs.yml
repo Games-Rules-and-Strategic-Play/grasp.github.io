@@ -3,17 +3,24 @@ site_url: http://grasp.famnit.upr.si
 
 theme:
   name: material
+  font:
+    text: Inter Tight
+    code: JetBrains Mono
   palette:
-    # Clean academic look (Deep Blue/Indigo)
+    # Light Mode
     - media: "(prefers-color-scheme: light)"
-      primary: indigo
-      accent: indigo
+      scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
+        
+    # Dark Mode
     - media: "(prefers-color-scheme: dark)"
-      primary: indigo
-      accent: indigo
+      scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -35,4 +42,4 @@ markdown_extensions:
   - footnotes
 
 extra_css:
-  - custom-theme.css
+  - css/custom-theme.css
