@@ -1,0 +1,27 @@
+site_name: GRASP Lab
+site_url: http://grasp.famnit.upr.si
+
+theme:
+  name: material
+  palette:
+    # Clean academic look (Deep Blue/Indigo)
+    - media: "(prefers-color-scheme: light)"
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs # Top horizontal menu
+    - navigation.sections # Sidebar groupings
+
+nav:
+  - Home: index.md
+  - Research: research.md
+  - Team: team.md
