@@ -1,43 +1,29 @@
 /* =========================================
-   MKDOCS MATERIAL CUSTOM COLOR PALETTE
+   FOOLPROOF MKDOCS MATERIAL CUSTOM COLORS
    ========================================= */
 
-/* Default / Light Mode */
-:root {
-    /* Partition Games Base Light Colors */
-    --orange: #FF6B35;
-    --orange-light: #FF8757;
-    --orange-dark: #E55A2B;
-    --white: #FFFFFF;
-
-    /* Override MkDocs Primary Colors */
-    --md-primary-fg-color:        var(--orange);
-    --md-primary-fg-color--light: var(--orange-light);
-    --md-primary-fg-color--dark:  var(--orange-dark);
-    --md-primary-bg-color:        var(--white); /* Text color on top of primary */
-
-    /* Override MkDocs Accent Colors (Links, Hover states) */
-    --md-accent-fg-color:         var(--orange);
+/* Force Light Mode Colors */
+[data-md-color-primary="custom"] {
+    --md-primary-fg-color:        #FF6B35;
+    --md-primary-fg-color--light: #FF8757;
+    --md-primary-fg-color--dark:  #E55A2B;
+    --md-primary-bg-color:        #FFFFFF;
+}
+[data-md-color-accent="custom"] {
+    --md-accent-fg-color:         #FF6B35;
     --md-accent-fg-color--transparent: rgba(255, 107, 53, 0.1);
-    --md-accent-bg-color:         var(--white);
+    --md-accent-bg-color:         #FFFFFF;
 }
 
-/* Dark Mode / Slate */
-[data-md-color-scheme="slate"] {
-    /* Partition Games Base Dark Colors */
-    --orange: #FF7A47;
-    --orange-light: #FF9166;
-    --orange-dark: #FF5722;
-    --dark-bg: #1a1a1a;
-
-    /* Override MkDocs Primary Colors */
-    --md-primary-fg-color:        var(--orange);
-    --md-primary-fg-color--light: var(--orange-light);
-    --md-primary-fg-color--dark:  var(--orange-dark);
-    --md-primary-bg-color:        var(--dark-bg); 
-
-    /* Override MkDocs Accent Colors */
-    --md-accent-fg-color:         var(--orange);
+/* Force Dark Mode (Slate) Colors */
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] {
+    --md-primary-fg-color:        #FF7A47;
+    --md-primary-fg-color--light: #FF9166;
+    --md-primary-fg-color--dark:  #FF5722;
+    --md-primary-bg-color:        #1a1a1a;
+}
+[data-md-color-scheme="slate"][data-md-color-accent="custom"] {
+    --md-accent-fg-color:         #FF7A47;
     --md-accent-fg-color--transparent: rgba(255, 122, 71, 0.1);
-    --md-accent-bg-color:         var(--dark-bg);
+    --md-accent-bg-color:         #1a1a1a;
 }
