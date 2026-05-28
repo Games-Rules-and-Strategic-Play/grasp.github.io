@@ -3,6 +3,8 @@ site_url: http://grasp.famnit.upr.si
 
 theme:
   name: material
+  logo: images/logo.svg  
+  favicon: images/logo.svg
   font:
     text: Inter Tight
     code: JetBrains Mono
