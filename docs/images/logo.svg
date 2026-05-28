@@ -1,44 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="100%" height="100%">
-  <defs>
-    <!-- Light Mode Gradient -->
-    <linearGradient id="graspGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF8757" />
-      <stop offset="100%" stop-color="#FF6B35" />
-    </linearGradient>
-    <!-- Glow Filter for Dark Mode compatibility -->
-    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="2" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
-  </defs>
-
   <g transform="translate(10, 10)">
-    <!-- ROW 1 (4 Blocks) -->
-    <rect x="20" y="20" width="35" height="35" rx="4" fill="none" stroke="url(#graspGrad)" stroke-width="3" opacity="0.9" />
-    <rect x="60" y="20" width="35" height="35" rx="4" fill="none" stroke="url(#graspGrad)" stroke-width="3" opacity="0.9" />
-    <rect x="100" y="20" width="35" height="35" rx="4" fill="none" stroke="url(#graspGrad)" stroke-width="3" opacity="0.9" />
-    <rect x="140" y="20" width="35" height="35" rx="4" fill="url(#graspGrad)" filter="url(#subtleGlow)" />
+    <!-- ROW 1 (4 Blocks) - Translucent white outlines leading to a solid white block -->
+    <rect x="20" y="20" width="35" height="35" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.3" />
+    <rect x="60" y="20" width="35" height="35" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.5" />
+    <rect x="100" y="20" width="35" height="35" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.7" />
+    <rect x="140" y="20" width="35" height="35" rx="4" fill="#FFFFFF" />
 
     <!-- ROW 2 (3 Blocks) -->
-    <rect x="20" y="60" width="35" height="35" rx="4" fill="none" stroke="url(#graspGrad)" stroke-width="3" opacity="0.7" />
-    <rect x="60" y="60" width="35" height="35" rx="4" fill="none" stroke="url(#graspGrad)" stroke-width="3" opacity="0.7" />
-    <rect x="100" y="60" width="35" height="35" rx="4" fill="url(#graspGrad)" filter="url(#subtleGlow)" />
+    <rect x="20" y="60" width="35" height="35" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.3" />
+    <rect x="60" y="60" width="35" height="35" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.5" />
+    <rect x="100" y="60" width="35" height="35" rx="4" fill="#FFFFFF" opacity="0.85" />
 
     <!-- ROW 3 (2 Blocks) -->
-    <rect x="20" y="100" width="35" height="35" rx="4" fill="none" stroke="url(#graspGrad)" stroke-width="3" opacity="0.5" />
-    <rect x="60" y="100" width="35" height="35" rx="4" fill="url(#graspGrad)" filter="url(#subtleGlow)" />
+    <rect x="20" y="100" width="35" height="35" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.3" />
+    <rect x="60" y="100" width="35" height="35" rx="4" fill="#FFFFFF" opacity="0.7" />
 
-    <!-- GRAPH THEORY STRUCTURAL OVERLAY (Nodes & Edges connecting partition corners) -->
-    <line x1="157.5" y1="37.5" x2="117.5" y2="77.5" stroke="#FF6B35" stroke-width="2.5" stroke-dasharray="4,3" />
-    <line x1="117.5" y1="77.5" x2="77.5" y2="117.5" stroke="#FF6B35" stroke-width="2.5" stroke-dasharray="4,3" />
+    <!-- GRAPH THEORY STRUCTURAL OVERLAY (Crisp White Connections) -->
+    <line x1="157.5" y1="37.5" x2="117.5" y2="77.5" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="4,3" opacity="0.9" />
+    <line x1="117.5" y1="77.5" x2="77.5" y2="117.5" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="4,3" opacity="0.9" />
     
-    <!-- Graph Vertices -->
-    <circle cx="157.5" cy="37.5" r="5" fill="#FFFFFF" stroke="#E55A2B" stroke-width="3" />
-    <circle cx="117.5" cy="77.5" r="5" fill="#FFFFFF" stroke="#E55A2B" stroke-width="3" />
-    <circle cx="77.5" cy="117.5" r="5" fill="#FFFFFF" stroke="#E55A2B" stroke-width="3" />
+    <!-- Graph Vertices (Filled with matching orange to "punch through" the white) -->
+    <circle cx="157.5" cy="37.5" r="5" fill="#FF6B35" stroke="#FFFFFF" stroke-width="3" />
+    <circle cx="117.5" cy="77.5" r="5" fill="#FF6B35" stroke="#FFFFFF" stroke-width="3" />
+    <circle cx="77.5" cy="117.5" r="5" fill="#FF6B35" stroke="#FFFFFF" stroke-width="3" />
   </g>
 
-  <!-- TYPOGRAPHY SECTION -->
-  <text x="210" y="105" font-family="'Inter Tight', 'Inter', 'Segoe UI', sans-serif" font-size="64" font-weight="900" fill="#FF6B35" letter-spacing="2">GRASP</text>
-  <text x="212" y="140" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="500" fill="#666666" letter-spacing="4">LABORATORY</text>
+  <!-- TYPOGRAPHY SECTION (Clean crisp white and semi-transparent subtitle) -->
+  <text x="210" y="105" font-family="'Inter Tight', 'Inter', 'Segoe UI', sans-serif" font-size="64" font-weight="900" fill="#FFFFFF" letter-spacing="2">GRASP</text>
+  <text x="212" y="140" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="500" fill="rgba(255, 255, 255, 0.65)" letter-spacing="4">LABORATORY</text>
 </svg>
