@@ -1,14 +1,17 @@
-name: Deploy GRASP Webpage
+name: Deploy GRASP to GitHub Pages
 
 on:
   push:
     branches:
       - main
 
+# This gives the Action permission to push the compiled website back to your repo
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
-    runs-on: self-hosted 
-    
+    runs-on: ubuntu-latest 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,9 +24,6 @@ jobs:
       - name: Install MkDocs and Material Theme
         run: pip install mkdocs-material
         
-      - name: Compile Markdown to HTML
-        run: mkdocs build
-
-      # Copy files directly on the machine
-      - name: Copy Files Locally
-        run: cp -r site/* /var/www/grasp-lab/
+      # This single command builds the site and pushes it to a hidden 'gh-pages' branch
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force
