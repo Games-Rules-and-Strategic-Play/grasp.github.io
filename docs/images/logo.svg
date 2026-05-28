@@ -1,31 +1,180 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="100%" height="100%">
-  <g transform="translate(10, 10)">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 225 200"
+   width="225"
+   height="200"
+   version="1.1"
+   id="svg13"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.5742968"
+     inkscape:cx="358.25519"
+     inkscape:cy="123.22962"
+     inkscape:window-width="2000"
+     inkscape:window-height="1159"
+     inkscape:window-x="425"
+     inkscape:window-y="206"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg13" />
+  <g
+     transform="translate(10,10)"
+     id="g12">
     <!-- ROW 1 (4 Blocks) - Translucent white outlines leading to a solid white block -->
-    <rect x="20" y="20" width="35" height="35" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.3" />
-    <rect x="60" y="20" width="35" height="35" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.5" />
-    <rect x="100" y="20" width="35" height="35" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.7" />
-    <rect x="140" y="20" width="35" height="35" rx="4" fill="#FFFFFF" />
-
+    <rect
+       x="20"
+       y="20"
+       width="35"
+       height="35"
+       rx="4"
+       fill="none"
+       stroke="#ffffff"
+       stroke-width="3"
+       opacity="0.3"
+       id="rect1" />
+    <rect
+       x="60"
+       y="20"
+       width="35"
+       height="35"
+       rx="4"
+       fill="none"
+       stroke="#ffffff"
+       stroke-width="3"
+       opacity="0.5"
+       id="rect2" />
+    <rect
+       x="100"
+       y="20"
+       width="35"
+       height="35"
+       rx="4"
+       fill="none"
+       stroke="#ffffff"
+       stroke-width="3"
+       opacity="0.7"
+       id="rect3" />
+    <rect
+       x="140"
+       y="20"
+       width="35"
+       height="35"
+       rx="4"
+       fill="#ffffff"
+       id="rect4" />
     <!-- ROW 2 (3 Blocks) -->
-    <rect x="20" y="60" width="35" height="35" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.3" />
-    <rect x="60" y="60" width="35" height="35" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.5" />
-    <rect x="100" y="60" width="35" height="35" rx="4" fill="#FFFFFF" opacity="0.85" />
-
+    <rect
+       x="20"
+       y="60"
+       width="35"
+       height="35"
+       rx="4"
+       fill="none"
+       stroke="#ffffff"
+       stroke-width="3"
+       opacity="0.3"
+       id="rect5" />
+    <rect
+       x="60"
+       y="60"
+       width="35"
+       height="35"
+       rx="4"
+       fill="none"
+       stroke="#ffffff"
+       stroke-width="3"
+       opacity="0.5"
+       id="rect6" />
+    <rect
+       x="100"
+       y="60"
+       width="35"
+       height="35"
+       rx="4"
+       fill="#ffffff"
+       opacity="0.85"
+       id="rect7" />
     <!-- ROW 3 (2 Blocks) -->
-    <rect x="20" y="100" width="35" height="35" rx="4" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.3" />
-    <rect x="60" y="100" width="35" height="35" rx="4" fill="#FFFFFF" opacity="0.7" />
-
+    <rect
+       x="20"
+       y="100"
+       width="35"
+       height="35"
+       rx="4"
+       fill="none"
+       stroke="#ffffff"
+       stroke-width="3"
+       opacity="0.3"
+       id="rect8" />
+    <rect
+       x="60"
+       y="100"
+       width="35"
+       height="35"
+       rx="4"
+       fill="#ffffff"
+       opacity="0.7"
+       id="rect9" />
     <!-- GRAPH THEORY STRUCTURAL OVERLAY (Crisp White Connections) -->
-    <line x1="157.5" y1="37.5" x2="117.5" y2="77.5" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="4,3" opacity="0.9" />
-    <line x1="117.5" y1="77.5" x2="77.5" y2="117.5" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="4,3" opacity="0.9" />
-    
+    <line
+       x1="157.5"
+       y1="37.5"
+       x2="117.5"
+       y2="77.5"
+       stroke="#ffffff"
+       stroke-width="2.5"
+       stroke-dasharray="4, 3"
+       opacity="0.9"
+       id="line9" />
+    <line
+       x1="117.5"
+       y1="77.5"
+       x2="77.5"
+       y2="117.5"
+       stroke="#ffffff"
+       stroke-width="2.5"
+       stroke-dasharray="4, 3"
+       opacity="0.9"
+       id="line10" />
     <!-- Graph Vertices (Filled with matching orange to "punch through" the white) -->
-    <circle cx="157.5" cy="37.5" r="5" fill="#FF6B35" stroke="#FFFFFF" stroke-width="3" />
-    <circle cx="117.5" cy="77.5" r="5" fill="#FF6B35" stroke="#FFFFFF" stroke-width="3" />
-    <circle cx="77.5" cy="117.5" r="5" fill="#FF6B35" stroke="#FFFFFF" stroke-width="3" />
+    <circle
+       cx="157.5"
+       cy="37.5"
+       r="5"
+       fill="#ff6b35"
+       stroke="#ffffff"
+       stroke-width="3"
+       id="circle10" />
+    <circle
+       cx="117.5"
+       cy="77.5"
+       r="5"
+       fill="#ff6b35"
+       stroke="#ffffff"
+       stroke-width="3"
+       id="circle11" />
+    <circle
+       cx="77.5"
+       cy="117.5"
+       r="5"
+       fill="#ff6b35"
+       stroke="#ffffff"
+       stroke-width="3"
+       id="circle12" />
   </g>
-
   <!-- TYPOGRAPHY SECTION (Clean crisp white and semi-transparent subtitle) -->
-  <text x="210" y="105" font-family="'Inter Tight', 'Inter', 'Segoe UI', sans-serif" font-size="64" font-weight="900" fill="#FFFFFF" letter-spacing="2">GRASP</text>
-  <text x="212" y="140" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="500" fill="rgba(255, 255, 255, 0.65)" letter-spacing="4">LABORATORY</text>
 </svg>
