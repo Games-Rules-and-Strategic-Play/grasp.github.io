@@ -115,13 +115,13 @@ p, a, span, div, li, ul, ol {
     max-width: 1000px !important;
     margin: 0 auto !important;
 }
-
 /* =========================================
    INTERACTIVE ACADEMIC BIBLIOGRAPHY CARDS
    ========================================= */
 
-/* Turn each bibliography item into a clean console card */
-.csl-entry {
+/* Turn the native footnote list items into clean cards */
+li[id^="fn:"] {
+    list-style-type: none !important; /* Removes the ugly default numbers */
     background-color: var(--off-white) !important;
     border-left: 4px solid var(--orange) !important;
     padding: 16px !important;
@@ -131,9 +131,15 @@ p, a, span, div, li, ul, ol {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.csl-entry:hover {
+li[id^="fn:"]:hover {
     transform: translateX(2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* Ensure the wrapper paragraph doesn't add stray margins */
+li[id^="fn:"] p {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* Container holding our clean summary line */
@@ -164,7 +170,7 @@ p, a, span, div, li, ul, ol {
     transition: all 0.2s ease;
 }
 
-.csl-entry:hover .bib-badge {
+li[id^="fn:"]:hover .bib-badge {
     background-color: var(--orange);
     color: #ffffff;
 }
@@ -180,8 +186,12 @@ p, a, span, div, li, ul, ol {
     color: var(--gray);
 }
 
-/* Highlight nested links inside full view */
 .bib-expanded-details a {
     color: var(--orange) !important;
     text-decoration: underline !important;
+}
+
+/* Hide the duplicate footnote return arrow inside the expanded view */
+.bib-expanded-details .footnote-backref {
+    display: none !important;
 }

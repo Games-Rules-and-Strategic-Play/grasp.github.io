@@ -6,61 +6,50 @@ The Games, Rules, and Strategic Play (GRASP) Lab focuses on the intersection of 
 
 \full_bibliography
 
-<!-- Dynamic post-processor script to style entries as expandable short-author elements -->
+<!-- Dynamic post-processor script optimized for fallback list structures -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // Locate all compiled bibtex items
-    const entries = document.querySelectorAll(".csl-entry");
+    // Locate all compiled list-item footnotes
+    const entries = document.querySelectorAll('li[id^="fn:"]');
     
     entries.forEach(entry => {
-        const rawHTML = entry.innerHTML;
-        const rawText = entry.innerText;
+        // Target the inner paragraph container
+        const targetElement = entry.querySelector('p') || entry;
+        const rawHTML = targetElement.innerHTML;
+        const rawText = targetElement.innerText;
         
-        // Defensive default fallbacks
+        // Defensive defaults
         let shortAuthor = "Research Paper";
-        let yearStr = "";
         let titleStr = "View Full Details";
+        let yearStr = "";
         
-        // Regex patterns to isolate Authors, Years (e.g. (2026)), and Titles
-        const yearRegex = /\((\d{4})\)/;
-        const yearMatch = rawText.match(yearRegex);
-        
-        if (yearMatch) {
-            yearStr = ` ${yearMatch[0]}`;
-            const splitParts = rawText.split(yearMatch[0]);
+        // 1. Parse fields using standard academic punctuation breaks (". ")
+        const parts = rawText.split('. ');
+        if (parts.length >= 2) {
+            const authorsBlock = parts[0].trim();
+            titleStr = parts[1].trim();
             
-            // 1. Process Authors (Left side of the year)
-            const authorsBlock = splitParts[0].trim();
-            if (authorsBlock) {
-                // Get the very first author name segment
-                const firstAuthorRaw = authorsBlock.split(/,|\s+and\s+/)[0].trim();
-                // Clean up trailing characters or symbols
-                const cleanLastName = firstAuthorRaw.replace(/[\.,&]/g, "");
-                
-                // Determine if we need an "et al." tag
-                const totalAuthorsCount = (authorsBlock.match(/,/g) || []).length;
-                shortAuthor = totalAuthorsCount > 1 ? `${cleanLastName} et al.` : cleanLastName;
-            }
+            // Isolate the primary author's surname
+            const firstAuthorRaw = authorsBlock.split(/,|\s+and\s+/)[0].trim();
+            const cleanLastName = firstAuthorRaw.replace(/[\.,&]/g, "");
             
-            // 2. Process Title (Right side of the year)
-            if (splitParts[1]) {
-                const cleanRightSide = splitParts[1].trim().replace(/^[\.\s,]+/, "");
-                // Grab the sentence up until the first major punctuation stop
-                const titleMatch = cleanRightSide.match(/^[^.]+./);
-                if (titleMatch) {
-                    titleStr = titleMatch[0].trim();
-                } else {
-                    titleStr = cleanRightSide.substring(0, 60) + "...";
-                }
-            }
-        } else {
-            // Fallback truncation if entry format varies wildly
-            titleStr = rawText.substring(0, 75) + "...";
+            // Check if there are multiple contributors
+            const hasMultiple = authorsBlock.includes(',') || authorsBlock.toLowerCase().includes(' and ');
+            shortAuthor = hasMultiple ? `${cleanLastName} et al.` : cleanLastName;
         }
         
-        // Build the modern UI card structure
-        entry.innerHTML = `
-            <div class="bib-toggle-header" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'block' ? 'none' : 'block'; this.querySelector('.bib-badge').innerText = this.nextElementSibling.style.display === 'block' ? 'SHOW LESS ▲' : 'SHOW MORE ▼';">
+        // 2. Extract 4-digit publication year from raw text strings
+        const yearMatch = rawText.match(/\b(19|20)\d{2}\b/);
+        if (yearMatch) {
+            yearStr = ` (${yearMatch[0]})`;
+        }
+        
+        // Clean stray footnote backref characters out of visible title field
+        titleStr = titleStr.replace(/↩/g, "").trim();
+        
+        // 3. Inject interactive accordions directly into layout container
+        targetElement.innerHTML = `
+            <div class="bib-toggle-header" onclick="const details = this.nextElementSibling; const isOpen = details.style.display === 'block'; details.style.display = isOpen ? 'none' : 'block'; this.querySelector('.bib-badge').innerText = isOpen ? 'SHOW MORE ▼' : 'SHOW LESS ▲';">
                 <div class="bib-summary-text">
                     <span style="color: var(--orange);">${shortAuthor}${yearStr}</span> — ${titleStr}
                 </div>
