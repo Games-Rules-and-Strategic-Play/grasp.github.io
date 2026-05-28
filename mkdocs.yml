@@ -44,3 +44,4 @@ markdown_extensions:
 
 extra_css:
   - css/custom-theme.css
+  - css/style-partitiongames.css
