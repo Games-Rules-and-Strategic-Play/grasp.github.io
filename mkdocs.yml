@@ -25,3 +25,11 @@ nav:
   - Home: index.md
   - Research: research.md
   - Team: team.md
+
+plugins:
+  - search
+  - bibtex:
+      bib_file: "docs/publications.bib"
+
+markdown_extensions:
+  - footnotes

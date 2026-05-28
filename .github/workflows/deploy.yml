@@ -5,7 +5,6 @@ on:
     branches:
       - main
 
-# This gives the Action permission to push the compiled website back to your repo
 permissions:
   contents: write
 
@@ -21,9 +20,13 @@ jobs:
         with:
           python-version: '3.x'
           
-      - name: Install MkDocs and Material Theme
-        run: pip install mkdocs-material
+      # We must install the Pandoc system package first
+      - name: Install Pandoc Dependency
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+          
+      # Install both the main theme and the bibtex extension
+      - name: Install MkDocs and Plugins
+        run: pip install mkdocs-material mkdocs-bibtex
         
-      # This single command builds the site and pushes it to a hidden 'gh-pages' branch
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force
