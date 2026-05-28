@@ -7,11 +7,11 @@ theme:
     text: Inter Tight
     code: JetBrains Mono
   palette:
-    # Light Mode
+# Light Mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: custom
-      accent: custom
+      primary: indigo   # <-- Change from custom
+      accent: teal     # <-- Change from custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -19,11 +19,12 @@ theme:
     # Dark Mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: custom
-      accent: custom
+      primary: indigo   # <-- Change from custom
+      accent: teal     # <-- Change from custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  
   features:
     - navigation.tabs # Top horizontal menu
 
@@ -43,4 +44,3 @@ markdown_extensions:
 
 extra_css:
   - css/custom-theme.css
-  - css/style-partitiongames.css
