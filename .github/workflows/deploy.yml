@@ -35,4 +35,4 @@ jobs:
 
       - name: Deploy via Rsync
         run: |
-          rsync -avz --delete site/ ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_IP }}:/var/www/grasp-lab/
+          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=accept-new" site/ ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_IP }}:/var/www/grasp-lab/
