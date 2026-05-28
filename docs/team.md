@@ -11,6 +11,14 @@
 </div>
 
 <div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+  <img src="../images/vladimir_gurvich.png" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-right: 20px; flex-shrink: 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <div>
+    <strong><a href="https://rutcor.rutgers.edu/~gurvich/">Vladimir Gurvich</a></strong> (Rutgers University)<br>
+    Vladimir is a prolific researcher at Rutgers University whose foundational work spans game theory, discrete optimization, and structural graph theory. His extensive collaboration with the lab focuses on structural properties of positional, subtraction, and partition-based games.
+  </div>
+</div>
+
+<div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
   <img src="../images/matjaz_krnc.jpg" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-right: 20px; flex-shrink: 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <div>
     <strong><a href="https://mkrnc.github.io/">Matjaž Krnc</a></strong> (UP FAMNIT)<br>
@@ -36,7 +44,7 @@
 * Nina Chiarelli (UP FAMNIT)
 * Aayan Deb (Rhodes College)
 * Soumitro Dwip (Rhodes College)
-* [Vladimir Gurvich](https://rutcor.rutgers.edu/~gurvich/) (Rutgers University)
 * Jelena Ilič (UP FAMNIT)
 * Hannah Meit (Rhodes College)
 * Ismael Qureshi (Rhodes College)
+* Sheila Sundaram (University of Minnesota)
