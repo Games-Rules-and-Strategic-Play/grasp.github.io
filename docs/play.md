@@ -1,6 +1,6 @@
 <iframe 
     src="https://partitiongames.netlify.app/" 
-    style="width: 100vw; height: calc(100vh - 60px); border: none; background: transparent; margin: 0; padding: 0; position: fixed; top: 60px; left: 0;" 
+    style="width: 100vw; height: calc(100vh - 60px); border: none; background: transparent; margin: 0; padding: 0; position: fixed; top: 260px; left: 0;" 
     allowtransparency="true">
 </iframe>
 
