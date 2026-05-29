@@ -1,16 +1,13 @@
-name: Deploy GRASP to GitHub Pages
+name: Deploy GRASP to Web Server
 
 on:
   push:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest 
+    runs-on: self-hosted  # Ensure this matches your runner label
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,13 +17,14 @@ jobs:
         with:
           python-version: '3.x'
           
-      # We must install the Pandoc system package first
-      - name: Install Pandoc Dependency
-        run: sudo apt-get update && sudo apt-get install -y pandoc
-          
-      # Install both the main theme and the bibtex extension
       - name: Install MkDocs and Plugins
         run: pip install mkdocs-material mkdocs-bibtex
         
-      - name: Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+      - name: Build Site
+        run: mkdocs build
+        
+      - name: Deploy to Web Root
+        run: |
+          # Remove old site files and copy new ones
+          rm -rf /var/www/grasp-lab/*
+          cp -r site/* /var/www/grasp-lab/
