@@ -1,4 +1,4 @@
-name: Deploy GRASP to Web Server
+name: Build and Deploy to Server
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest          # Use GitHub's free runner
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -16,19 +16,18 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-          
-      - name: Install MkDocs and Plugins
+
+      - name: Install dependencies
         run: pip install mkdocs-material mkdocs-bibtex
-        
-      - name: Build Site
+
+      - name: Build site
         run: mkdocs build
-        
-      - name: Deploy to Web Root via rsync
-        uses: burnett01/rsync-deployments@7.0.1
-        with:
-          switches: -avzr --delete
-          path: site/
-          remote_path: /var/www/grasp-lab/
-          remote_host: ${{ secrets.DEPLOY_HOST }}
-          remote_user: ${{ secrets.DEPLOY_USER }}
-          remote_key: ${{ secrets.DEPLOY_SSH_KEY }}
+
+      - name: Deploy to Web Root
+        run: |
+          # Remove old content
+          sudo rm -rf /var/www/grasp-lab/*
+          # Copy new site files
+          sudo cp -r site/* /var/www/grasp-lab/
+          # Ensure Nginx can read the files
+          sudo chown -R www-data:www-data /var/www/grasp-lab/
