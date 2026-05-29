@@ -1,0 +1,198 @@
+/* =========================================
+   FOOLPROOF MKDOCS MATERIAL CUSTOM COLORS
+   ========================================= */
+
+/* Force Light Mode Colors universally */
+[data-md-color-scheme="default"] {
+    --md-primary-fg-color:        #FF6B35 !important;
+    --md-primary-fg-color--light: #FF8757 !important;
+    --md-primary-fg-color--dark:  #E55A2B !important;
+    --md-primary-bg-color:        #FFFFFF !important;
+    
+    --md-accent-fg-color:         #FF6B35 !important;
+    --md-accent-fg-color--transparent: rgba(255, 107, 53, 0.1) !important;
+    --md-accent-bg-color:         #FFFFFF !important;
+}
+
+/* Force Dark Mode (Slate) Colors universally */
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color:        #FF7A47 !important;
+    --md-primary-fg-color--light: #FF9166 !important;
+    --md-primary-fg-color--dark:  #FF5722 !important;
+    --md-primary-bg-color:        #1a1a1a !important;
+    
+    --md-accent-fg-color:         #FF7A47 !important;
+    --md-accent-fg-color--transparent: rgba(255, 122, 71, 0.1) !important;
+    --md-accent-bg-color:         #1a1a1a !important;
+}
+
+/* =========================================
+   GLOBAL PARTITION GAMES STYLING
+   ========================================= */
+
+/* Define partition games color scheme */
+:root {
+    --orange: #FF6B35;
+    --orange-light: #FF8757;
+    --orange-dark: #E55A2B;
+    --white: #FFFFFF;
+    --off-white: #FAFAFA;
+    --gray-light: #F5F5F5;
+    --gray: #666666;
+    --gray-dark: #333333;
+    --black: #000000;
+}
+
+[data-md-color-scheme="slate"] {
+    --orange: #FF7A47;
+    --orange-light: #FF9166;
+    --orange-dark: #FF5722;
+    --white: #1a1a1a;
+    --off-white: #222222;
+    --gray-light: #2a2a2a;
+    --gray: #a0a0a0;
+    --gray-dark: #e5e5e5;
+    --black: #ffffff;
+}
+
+/* Override page background and fonts globally */
+body {
+    font-family: 'JetBrains Mono', 'Source Code Pro', 'Monaco', 'Menlo', monospace !important;
+    background-color: var(--white) !important;
+    color: var(--gray-dark) !important;
+}
+
+* {
+    font-family: 'JetBrains Mono', 'Source Code Pro', 'Monaco', 'Menlo', monospace !important;
+}
+
+/* Override Material Design container */
+.md-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.md-main {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.md-main__inner {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Hide sidebar to remove title duplication */
+.md-sidebar {
+    display: none !important;
+}
+
+/* FIXED: Headers now accurately inherit your custom orange color variable */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'JetBrains Mono', 'Source Code Pro', 'Monaco', 'Menlo', monospace !important;
+    color: var(--orange) !important;
+}
+
+p, a, span, div, li, ul, ol {
+    font-family: 'JetBrains Mono', 'Source Code Pro', 'Monaco', 'Menlo', monospace !important;
+}
+
+/* Override any Material Design color overrides */
+.md-typeset {
+    background: var(--white) !important;
+    color: var(--gray-dark) !important;
+}
+
+/* FIXED: Prevent content blocks from resetting title color to gray */
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+    color: var(--orange) !important;
+}
+
+/* Adjust content width when sidebar is hidden */
+.md-content {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+}
+
+/* =========================================
+   INTERACTIVE ACADEMIC BIBLIOGRAPHY CARDS
+   ========================================= */
+
+/* High-contrast container for each publication block */
+.csl-entry, .bibliography > p, .bibtex-entry {
+    background-color: var(--off-white) !important;
+    border-left: 4px solid var(--orange) !important;
+    padding: 18px !important;
+    margin-bottom: 18px !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.csl-entry:hover, .bibliography > p:hover {
+    transform: translateX(3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Header summary container */
+.bib-toggle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 20px;
+    user-select: none;
+}
+
+/* BIGGER FONT: Main paper title styling */
+.bib-summary-text {
+    font-size: 1.25rem; 
+    font-weight: 700;
+    color: var(--orange) !important;
+    line-height: 1.4;
+}
+
+/* Accent element for the publication year */
+.bib-summary-year {
+    color: var(--gray);
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-left: 6px;
+}
+
+/* Expansion action badge */
+.bib-badge {
+    background-color: var(--gray-light);
+    color: var(--orange);
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    white-space: nowrap;
+    border: 1px solid var(--orange-light);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.csl-entry:hover .bib-badge, .bibliography > p:hover .bib-badge {
+    background-color: var(--orange);
+    color: #ffffff;
+}
+
+/* SMALLER FONT: Collapsible multi-line metadata block */
+.bib-expanded-details {
+    display: none;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--gray-light);
+    font-size: 0.85rem;   /* Smaller detailed view font */
+    line-height: 1.6;
+    color: var(--gray-dark);
+}
+
+.bib-expanded-details a {
+    color: var(--orange) !important;
+    text-decoration: underline !important;
+}
