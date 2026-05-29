@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: self-hosted  # Ensure this matches your runner label
+    runs-on: ubuntu-latest          # Use GitHub's free runner
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -23,8 +23,12 @@ jobs:
       - name: Build Site
         run: mkdocs build
         
-      - name: Deploy to Web Root
-        run: |
-          # Remove old site files and copy new ones
-          rm -rf /var/www/grasp-lab/*
-          cp -r site/* /var/www/grasp-lab/
+      - name: Deploy to Web Root via rsync
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avzr --delete
+          path: site/
+          remote_path: /var/www/grasp-lab/
+          remote_host: ${{ secrets.DEPLOY_HOST }}
+          remote_user: ${{ secrets.DEPLOY_USER }}
+          remote_key: ${{ secrets.DEPLOY_SSH_KEY }}
