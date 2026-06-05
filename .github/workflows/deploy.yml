@@ -26,8 +26,7 @@ jobs:
       - name: Deploy to Web Root
         run: |
           # Remove old content
-          sudo rm -rf /var/www/grasp-lab/*
+          rm -rf /var/www/grasp-lab/*
+          
           # Copy new site files
-          sudo cp -r site/* /var/www/grasp-lab/
-          # Ensure Nginx can read the files
-          sudo chown -R www-data:www-data /var/www/grasp-lab/
+          cp -r site/* /var/www/grasp-lab/
