@@ -38,6 +38,7 @@
 
 ## Collaborators
 
+* Daniil Baldouski (UP FAMNIT)
 * Ina Bašić (TU Darmstadt)
 * [Nino Bašić](https://osebje.famnit.upr.si/~nino.basic/) (UP FAMNIT)
 * Amalia Bay (Rhodes College)
