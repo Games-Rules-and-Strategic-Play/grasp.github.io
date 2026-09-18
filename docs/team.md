@@ -50,5 +50,5 @@
 * Sahaf Mahmud (Rhodes College)
 * Hannah Meit (Rhodes College)
 * Labib Muzahid (Rhodes College)
-* [Andres David Santamaria-Galvis](https://sites.google.com/view/adsantamaria/home) (IMFM UL)
+* [Andres David Santamaria-Galvis](https://sites.google.com/view/adsantamaria/home) (UL IMFM)
 * Ismael Qureshi (Rhodes College)
