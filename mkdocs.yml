@@ -35,6 +35,7 @@ nav:
   - Research: research.md
   - Team: team.md
   - Play: play.md
+  - CGT4TCS: cgt4tcs.md
 
 plugins:
   - search
