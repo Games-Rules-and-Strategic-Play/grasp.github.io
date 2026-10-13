@@ -96,33 +96,13 @@ An *integer partition* (or simply, a *partition*) of a nonnegative integer $n$ i
 
 | 0 | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
-|  | 1 | 2<br>
-
-<br>1+1 | 3<br>
-
-<br>2+1<br>
-
-<br>1+1+1 | 4<br>
-
-<br>3+1<br>
-
-<br>2+2<br>
-
-<br>2+1+1<br>
-
-<br>1+1+1+1 | 5<br>
-
-<br>4+1<br>
-
-<br>3+2<br>
-
-<br>3+1+1<br>
-
-<br>2+2+1<br>
-
-<br>2+1+1+1<br>
-
-<br>1+1+1+1+1 |
+|  | 1 | 2 | 3 | 4 | 5 |
+|  |  | 1+1 | 2+1 | 3+1 | 4+1 |
+|  |  |  | 1+1+1 | 2+2 | 3+2 |
+|  |  |  |  | 2+1+1 | 3+1+1 |
+|  |  |  |  | 1+1+1+1 | 2+2+1 |
+|  |  |  |  |  | 2+1+1+1 |
+|  |  |  |  |  | 1+1+1+1+1 |
 
 Because partitions are not distinguished by the order of the parts, we can arrange them as we wish. We will use the canonical form in which the parts appear in nonincreasing order, as shown above. We use $p(n)$ to denote the number of partitions of the positive integer $n$. Thus
 

@@ -96,33 +96,13 @@ V zadnjih letih smo[^2] preučevali različne kombinatorične igre na particijah
 
 | 0 | 1 | 2 | 3 | 4 | 5 |
 | --- | --- | --- | --- | --- | --- |
-|  | 1 | 2<br>
-
-<br>1+1 | 3<br>
-
-<br>2+1<br>
-
-<br>1+1+1 | 4<br>
-
-<br>3+1<br>
-
-<br>2+2<br>
-
-<br>2+1+1<br>
-
-<br>1+1+1+1 | 5<br>
-
-<br>4+1<br>
-
-<br>3+2<br>
-
-<br>3+1+1<br>
-
-<br>2+2+1<br>
-
-<br>2+1+1+1<br>
-
-<br>1+1+1+1+1 |
+|  | 1 | 2 | 3 | 4 | 5 |
+|  |  | 1+1 | 2+1 | 3+1 | 4+1 |
+|  |  |  | 1+1+1 | 2+2 | 3+2 |
+|  |  |  |  | 2+1+1 | 3+1+1 |
+|  |  |  |  | 1+1+1+1 | 2+2+1 |
+|  |  |  |  |  | 2+1+1+1 |
+|  |  |  |  |  | 1+1+1+1+1 |
 
 Ker particij ne razlikujemo glede na vrstni red delov, jih lahko uredimo, kakor želimo. Uporabili bomo kanonično obliko, v kateri so deli zapisani v nenaraščajočem vrstnem redu, kot je prikazano zgoraj. Z $p(n)$ označimo število particij pozitivnega celega števila $n$. Torej
 
