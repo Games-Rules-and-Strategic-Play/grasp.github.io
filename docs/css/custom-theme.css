@@ -62,7 +62,7 @@ body {
     color: var(--gray-dark) !important;
 }
 
-* {
+*:not(mjx-container):not(mjx-container *) {
     font-family: 'JetBrains Mono', 'Source Code Pro', 'Monaco', 'Menlo', monospace !important;
 }
 
@@ -90,12 +90,15 @@ body {
 }
 
 /* FIXED: Headers now accurately inherit your custom orange color variable */
-h1, h2, h3, h4, h5, h6 {
+h1:not(mjx-container *), h2:not(mjx-container *), h3:not(mjx-container *),
+h4:not(mjx-container *), h5:not(mjx-container *), h6:not(mjx-container *) {
     font-family: 'JetBrains Mono', 'Source Code Pro', 'Monaco', 'Menlo', monospace !important;
     color: var(--orange) !important;
 }
 
-p, a, span, div, li, ul, ol {
+p:not(mjx-container *), a:not(mjx-container *), span:not(mjx-container *),
+div:not(mjx-container *), li:not(mjx-container *), ul:not(mjx-container *),
+ol:not(mjx-container *) {
     font-family: 'JetBrains Mono', 'Source Code Pro', 'Monaco', 'Menlo', monospace !important;
 }
 
