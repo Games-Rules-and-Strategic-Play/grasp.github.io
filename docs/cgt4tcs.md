@@ -1,5 +1,12 @@
 **English** · [Slovenščina](cgt4tcs-sl.md)
 
+<style>
+.md-content__inner.md-typeset,
+.md-content__inner.md-typeset :not(code, code *, pre, pre *, mjx-container, mjx-container *) {
+    font-family: "Inter Tight", sans-serif !important;
+}
+</style>
+
 # Module 1: Some Combinatorial Games on Partitions
 
 **Theoretical Computer Science I**

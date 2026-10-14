@@ -1,5 +1,12 @@
 **Slovenščina** · [English](cgt4tcs.md)
 
+<style>
+.md-content__inner.md-typeset,
+.md-content__inner.md-typeset :not(code, code *, pre, pre *, mjx-container, mjx-container *) {
+    font-family: "Inter Tight", sans-serif !important;
+}
+</style>
+
 # Modul 1: Nekatere kombinatorične igre na particijah
 
 **Teoretično računalništvo I**
@@ -39,7 +46,7 @@ Zdaj ste na vrsti vi.
 **Vaja 1.** V skupini dopolnite spodnjo tabelo tako, da za dano število žetonov navedete igralca, ki ima zmagovalno strategijo.
 
 | $n$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **zmagovalec** | N | N | N | P | N |  |  |  |  |  |  |  |  |
 
 **Vaja 2.** Če niste naredili napake, bo za vaš odgovor pri Vaji 1 veljalo očitno pravilo. Ali se lahko domislite načina, kako dokazati, da pravilo velja za poljubno pozitivno število žetonov? Kaj vam pravilo pove o tem, kdo ima zmagovalno strategijo pri 30 žetonih?
@@ -57,7 +64,7 @@ Pri tej igri je vredno opaziti nekaj stvari:
 **Vaja 3.** Dopolnite spodnjo tabelo za $S_{\{2,5\}}$.
 
 | $n$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |--- |
 | **zmagovalec** |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 Kot smo videli, je lahko precej zapleteno slediti temu, kateri igralec ima zmagovalno strategijo. Razlog je, da Nina začne kot naslednja igralka, po njeni potezi pa Peter postane naslednji igralec in Nina prejšnja igralka. Analiza je preprostejša, če o položaju govorimo kot o položaju, ki ga lahko dobi *naslednji* ali *prejšnji* igralec, namesto da ga pripisujemo določeni osebi. Položaj, ki ga lahko dobi naslednji (oziroma prejšnji) igralec, imenujemo $\mathcal{N}$- (oziroma $\mathcal{P}$-) položaj.
