@@ -36,6 +36,7 @@ nav:
   - Team: team.md
   - Play: play.md
   - CGT4TCS: cgt4tcs.md
+  - Surreal Seminar: surreal-seminar.md
 
 plugins:
   - search
