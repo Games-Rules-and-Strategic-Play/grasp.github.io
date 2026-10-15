@@ -1,6 +1,6 @@
 # **Surreal numbers and combinatorial games** 
 
-A seminar series on Conway’s *On Numbers and Games* (ONAG) requires **10 sessions** (60–90 minutes each). This pace allows you to establish the construction of the surreal numbers $\mathbf{No}$ in the first half, general Combinatorial Game Theory (CGT) in the second half, and explicitly study how surreal numbers sit embeddably inside the broader partially ordered group of playing games $\mathbf{Pg}$.
+Surreal numbers are a generalization of the real numbers that include infinitesimal and infinite numbers. In this series of about ten weekly meetings, approximately 60 minutes each, we will explore the connection between surreal numbers and combinatorial games. Our primary resource will be Conway's On Numbers and Games.
 
 ## **Availability Poll**
 Please indicate your prefered meeting times [here](https://strawpoll.com/w4nWW127qnA).
