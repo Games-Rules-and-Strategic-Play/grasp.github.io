@@ -1,4 +1,4 @@
-# **Surreal numbers and combinatorial games** 
+# **Seminar on surreal numbers and combinatorial games** 
 
 Surreal numbers are a generalization of the real numbers that include infinitesimal and infinite numbers. In this series of about ten weekly meetings, approximately 60 minutes each, we will explore the connection between surreal numbers and combinatorial games. Our primary resource will be Conway's On Numbers and Games.
 
