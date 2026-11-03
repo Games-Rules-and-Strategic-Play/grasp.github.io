@@ -84,7 +84,7 @@ pre, code, kbd, samp {
 }
 
 /* Hide sidebar to remove title duplication */
-.md-sidebar {
+.md-sidebar--primary {
     display: none !important;
 }
 
@@ -192,3 +192,5 @@ h4:not(mjx-container *), h5:not(mjx-container *), h6:not(mjx-container *) {
     color: var(--orange) !important;
     text-decoration: underline !important;
 }
+
+
