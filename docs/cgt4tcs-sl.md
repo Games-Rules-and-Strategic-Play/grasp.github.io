@@ -196,3 +196,90 @@ Kvadratek Youngovega diagrama imenujemo *vogal*, če pod njim ali desno od njega
 8. $[5,4^2,1^3]$
 
 **Vaja 11.** Ali je igra **Vogali** konjugatno invariantna? Zakaj oziroma zakaj ne?
+
+# Modul 2
+
+V prejšnjem modulu ste spoznali nekatere preproste kombinatorične igre. V tem modulu bomo videli, kako se lahko nekatere tehnike dokazovanja, ki jih bomo preučevali, uporabijo za dokazovanje izrekov o teh igrah. Kot bomo videli, je indukcija v tem kontekstu še posebej močna, tako kot povsod v kombinatoriki.
+
+Ko igrate igro, je koristno vedeti, katere so $\p$-pozicije, saj so to tiste, ki jih želite prepustiti nasprotniku. Če jih poznate, lahko raziščete, ali katera od vaših potez vodi do takšne pozicije. Ne pozabite, da so $\n$-pozicije natanko tiste, pri katerih obstaja poteza v $\p$-pozicijo, medtem ko so $\p$-pozicije tiste brez takšne poteze; to boste uporabili v spodnjih nalogah.
+
+Pri nekaterih igrah ni pretežko okarakterizirati izgubljenih pozicij. Na primer, pri igri $S_{\{1, 2, 3\}}$ smo videli močne dokaze (vendar še ne formalnega dokaza -- ostanite z nami), da so izgubljene pozicije natanko tiste kopice, pri katerih je število žetonov deljivo s štiri. Za Nim in LCTR je takšna karakterizacija mogoča, a nekoliko bolj zapletena. Kljub temu je mogoče brez prevelikega truda priti do nekaterih bolj omejenih rezultatov.
+
+## Izgubljene pozicije v $S_{\{1, 2, 3\}}$
+
+Spomnimo se, da pri igri $S_{\{1, 2, 3\}}$ igralca izmenično jemljeta 1, 2 ali 3 žetone iz ene kopice. Sedaj imate orodja za dokaz naše domneve, da so izgubljene pozicije v normalni igri $S_{\{1, 2, 3\}}$ natanko tiste, pri katerih je število žetonov v kopici večkratnik števila štiri.
+
+**Naloga 1:** Z indukcijo dokažite, da je pozicija v normalni igri $S_{\{1, 2, 3\}}$ izgubljena natanko tedaj, ko je število žetonov v kopici večkratnik števila štiri.
+
+## Nekaj rezultatov za Nim
+
+Spomnimo se, da je pri Nimu pozitivno število kopic žetonov. Igralca izmenično izbirata kopico in iz nje vzameta pozitivno število žetonov. Začeli bomo z nekaj preprostimi rezultati za normalno igro Nim. Te lahko ugotovimo z neposrednim dokazom.
+
+**Naloga 2:** Naj bo $n \in \mathbb Z_{>0}$. Dokažite, da je v normalni igri Nim, $n$ v $\n$.
+
+**Naloga 3:** Naj bo $n \in \mathbb Z_{>0}$. Navedite in dokažite potreben in zadosten pogoj, da je $1/n$ v $\p$ v normalni igri Nim.
+
+**Naloga 4:** Dokažite, da je v normalni igri Nim, $2/2$ v $\n$.
+
+**Naloga 5:** Naj bo $n \in \mathbb Z_{>0}$. Navedite in dokažite potreben in zadosten pogoj, da je $2/n$ v $\p$ v normalni igri Nim.
+
+Nato obravnavamo nekaj problemov, ki zahtevajo uporabo indukcije.
+
+**Naloga 6:** Navedite domnevo, ki karakterizira dvokopične pozicije v normalni igri Nim, ki so v $\p$.
+
+**Naloga 7:** Uporabite indukcijo, da dokažete svojo domnevo iz Naloge 6.
+
+**Naloga 8:** Navedite domnevo za normalno igro Nim, ki podaja zadosten pogoj, da je pozicija s sodim številom kopic v $\p$.
+
+**Naloga 9:** Uporabite indukcijo, da dokažete svojo domnevo iz Naloge 8.
+
+**Naloga 10:** Ali je pogoj v vaši domnevi iz Naloge 8 tudi potreben za pripadnost $\p$? Pojasnite.
+
+## Nekaj rezultatov za LCTR
+
+Spomnimo se, da je LCTR igra na particijah, pri kateri igralca izmenično odstranjujeta bodisi skrajni levi stolpec bodisi zgornjo vrstico ustreznega Youngovega diagrama. Obravnavali bomo nekaj rezultatov, ki jih je mogoče neposredno dokazati, vendar najprej potrebujemo nekaj terminologije.
+
+*Vrstica* je particija oblike $[c]$, kjer je $c \in \mathbb Z_{>0}$. *Stolpec* je particija oblike $[1^r]$, kjer je $r \in \mathbb Z_{>0}$. *Kljuka* (hook) je particija oblike $[c, 1^{r-1}]$, kjer sta $c \in \mathbb Z_{>0}$ in $r \in \mathbb Z_{>0}$. Opazite, da če je $r=1$, potem je $[c, 1^{r-1}]$ vrstica in če je $c = 1$, potem je $[c, 1^{r-1}]$ stolpec. Pravimo, da je kljuka $[c, 1^{r-1}]$ *nedegenerirana*, če je $c>1$ in $r>1$.
+
+**Naloga 11:** Oblikujte in dokažite rezultate o $\p/\n$-statusu v normalni igri LCTR za vrstice, stolpce in nedegenerirane kljuke.
+
+Nato bomo raziskali nekaj primerov v LCTR, kjer je indukcija v pomoč. *Pravokotnik* je particija oblike $[c^r]$, kjer sta $c \in \mathbb Z_{>0}$ in $r \in \mathbb Z_{>0}$. *Stopnišče* (staircase) je particija oblike $[n, n-1, \ldots, 2, 1]$, kjer je $n \in \mathbb Z_{>0}$.
+
+**Naloga 12:** Oblikujte in dokažite karakterizacije $\p/\n$-statusa pravokotnikov in stopnišč v normalni igri LCTR.
+
+**Naloga 13:** Oblikujte in dokažite karakterizacijo $\p/\n$-statusa particij z dvema deloma v normalni igri LCTR.
+
+Naslednji dve nalogi (in morda tudi prejšnje) bosta lažji z nekaj primeri pred vami. Z veseljem bom delil z vami nekaj kode za Mathematico ali pa vam zagnal primere, da ustvarite nekaj podatkov. Na UP bi morali imeti dostop do Mathematice.
+
+**Naloga 14:** Oblikujte in dokažite rezultat o $\p/\n$-statusu samokonjugiranih particij v normalni igri LCTR.
+
+**Naloga 15:** Posplošite svoj rezultat, ali pa del rezultata, iz Naloge 14 na particije, ki niso samokonjugirane.
+
+## Nekaj rezultatov za CRIM
+
+Spomnimo se, da pri igri CRIM igralca izmenično odstranjujeta eno vrstico ali stolpec iz Youngovega diagrama particije. Če vrstica ali stolpec ni ne prvi ne zadnji, se preostala dela Youngovega diagrama združita. Začnemo z rezultatom za normalno igro CRIM, ki ga lahko neposredno dokažemo.
+
+**Naloga 16:** Navedite in dokažite karakterizacijo za $\p/\n$-status vrstic in stolpcev v normalni igri CRIM.
+
+Preostali rezultati zahtevajo indukcijo.
+
+**Naloga 17:** Navedite in dokažite karakterizacijo za $\p/\n$-status pravokotnikov v normalni igri CRIM.
+
+**Naloga 18:** Navedite in dokažite karakterizacijo za $\p/\n$-status nedegeneriranih kljuk v normalni igri CRIM.
+
+**Naloga 19:** Oblikujte domnevo za $\p/\n$-status stopnišč v normalni igri CRIM.
+
+## Nekaj rezultatov za Corners
+
+Spomnimo se, da pri igri Corners igralca izmenično odstranjujeta neprazne množice vogalov iz Youngovega diagrama particije.
+
+**Naloga 20:** Uporabite podatke za oblikovanje domneve, ki karakterizira $\p/\n$-status dvovrstičnih particij v normalni igri Corners.
+
+**Naloga 21:** Uporabite indukcijo, da dokažete svojo domnevo iz Naloge 20.
+
+**Naloga 22:** Uporabite podatke za oblikovanje domneve, ki karakterizira $\p/\n$-status kljuk v normalni igri Corners.
+
+**Naloga 23:** Uporabite indukcijo, da dokažete svojo domnevo iz Naloge 22.
+
+## Zaključek
+Videli smo, da se lahko različne tehnike dokazovanja uporabijo za boljše razumevanje, kako igrati kombinatorične igre in zmagati. To je le vrh ledene gore, saj obstaja še veliko drugih kombinatoričnih iger in dodatnih tehnik dokazovanja, ki se uporabljajo pri njihovem preučevanju.

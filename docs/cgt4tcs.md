@@ -5,6 +5,9 @@
 .md-content__inner.md-typeset :not(code, code *, pre, pre *, mjx-container, mjx-container *) {
     font-family: "Inter Tight", sans-serif !important;
 }
+.md-sidebar--secondary {
+  display: block !important;
+}
 </style>
 
 # Module 1: Some Combinatorial Games on Partitions
@@ -193,3 +196,91 @@ A square of a Young diagram is called a *corner* if there is no square below it 
 8. $[5,4^2,1^3]$
 
 **Exercise 11.** Is **Corners** conjugate-invariant? Why or why not?
+
+
+# Module 2
+
+In the last module, you learned about some simple combinatorial games. In this module, we will see how some of the proof techniques we will study can be used to prove theorems about these games. As we will see, induction is particularly powerful in this context, as it is throughout combinatorics. 
+
+When playing a game it is helpful to know what the $\p$-positions are, since these are the ones you want to leave to your opponent. If you know them, then you can investigate whether any of your moves result in such a position. Remember that $\n$-positions are precisely those with a move to a $\p$-position, while $\p$-positions are those positions with no such move; you will use this in the exercises below.
+
+In some games, it's not too hard to characterize the losing positions. For example, in $S_{\{1, 2, 3\}}$, we saw strong evidence (but not proof -- stay tuned) that the losing positions are precisely those heaps for which the number of tokens is divisible by four. For Nim and LCTR, such a characterization is possible but a bit involved. However, some more restricted results can be obtained without too much effort. 
+
+## Losing Positions in $S_{\{1, 2, 3\}}$
+
+Recall that in $S_{\{1, 2, 3\}}$, players take turns removing 1, 2, or 3 tokens from a single heap. Now you have the tools to prove our conjecture that the losing positions in normal-play $S_{\{1, 2, 3\}}$ are precisely those for which the number of tokens in the heap is divisible by four.  
+
+**Exercise 1:** Use induction to prove that a position in normal-play $S_{\{1, 2, 3\}}$ is losing if and only if the number of tokens in the heap is a multiple of four. 
+
+## Some results on Nim
+
+Recall that in Nim there are a positive number of heaps of tokens. Players alternate choosing a heap and removing a positive number of tokens. We begin with some simple results for normal-play Nim. These can be established by direct proof. 
+
+**Exercise 2:** Let $n \in \mathbb Z_{>0}$. Prove that in normal-play Nim, $n$ is in $\n$. 
+
+**Exercise 3:** Let $n \in \mathbb Z_{>0}$. State and prove a necessary and sufficient condition for $1/n$ to be in $\p$ in normal-play Nim. 
+
+**Exercise 4:** Prove that in normal-play Nim, $2/2$ is in $\n$. 
+
+**Exercise 5:** Let $n \in \mathbb Z_{>0}$. State and prove a necessary and sufficient condition for $2/n$ to be in $\p$ in normal-play Nim. 
+
+Next we consider some problems that require the use of induction. 
+
+**Exercise 6:** State a conjecture characterizing the two-heap positions in normal-play Nim that are in $\p$. 
+
+**Exercise 7:** Use induction to prove your conjecture from Exercise 6. 
+
+**Exercise 8:** State a conjecture for normal-play Nim giving a sufficient condition for a position with an even number of heaps to be in $\p$. 
+
+**Exercise 9:** Use induction to prove your conjecture from Exercise 8. 
+
+**Exercise 10:** Is the condition in your conjecture from Exercise 8 also necessary for membership in $\p$? Explain.  
+
+## Some Results on LCTR
+
+Recall that LCTR is a game on partitions in which the players take turns removing either the leftmost column or topmost row of the corresponding Young diagram. We will consider some results that can be established directly, but first we need some terminology. 
+
+A *row* is a partition of the form $[c]$, where $c \in \mathbb Z_{>0}$. A *column* is a partition of the form $[1^r]$, where $r \in \mathbb Z_{>0}$. A *hook* is a partition of the form $[c, 1^{r-1}]$, where $c \in \mathbb Z_{>0}$ and $r \in \mathbb Z_{>0}$. Notice that if $r=1$ then $[c, 1^{r-1}]$ is a row and if $c = 1$ then $[c, 1^{r-1}]$ is a column. We say that the hook $[c, 1^{r-1}]$ is *nondegenerate* if $c>1$ and $r>1$. 
+
+**Exercise 11:** Formulate and prove results about the $\p/\n$-status in normal-play LCTR of rows, columns, and nondegenerate hooks. 
+
+Next, we'll explore some examples in LCTR where induction is helpful. A *rectangle* is a partition of the form $[c^r]$, where $c \in \mathbb Z_{>0}$ and $r \in \mathbb Z_{>0}$. A *staircase* is a partition of the form $[n, n-1, \ldots, 2, 1]$ where $n \in \mathbb Z_{>0}$. 
+
+**Exercise 12:** Formulate and prove characterizations of the $\p/\n$-status of rectangles and staircases in normal-play LCTR. 
+
+**Exercise 13:** Formulate and prove a characterization of the $\p/\n$-status of partitions with two parts in normal-play LCTR. 
+
+The next two exercises (and maybe the previous ones too) will be easier with some examples in front of you. I'll be happy to share some Mathematica code with you, or to run examples for you, to generate some data. You should have access to Mathematica through UP. 
+
+**Exercise 14:** Formulate and prove a result about the $\p/\n$-status of self-conjugate partitions in normal-play LCTR. 
+
+**Exercise 15:** Generalize your result, or part of it, from Exercise 14 to partitions that are not self-conjugate. 
+
+## Some results on CRIM
+
+Recall that in CRIM, players take turns removing a single row or column from the Young diagram of a partition. If the row or column is neither the first nor the last, then the two parts of the Young diagram are merged. We begin with a result for normal-form CRIM that can be proved directly. 
+
+**Exercise 16:** State and prove a characterization for the $\p/\n$-status of rows and columns in normal-form CRIM. 
+
+The remaining results require induction. 
+
+**Exercise 17:** State and prove a characterization for the $\p/\n$-status of rectangles in normal-form CRIM. 
+
+**Exercise 18:** State and prove a characterization for the $\p/\n$-status of nondegenerate hooks in normal-form CRIM.
+
+**Exercise 19:** Formulate a conjecture for the $\p/\n$-status of staircases in normal-form CRIM.
+
+## Some results on Corners
+
+Recall that in Corners, players alternate removing nonempty sets of corners from the Young diagram of a partition. 
+
+**Exercise 20:** Use data to formulate a conjecture characterizing the $\p/\n$-status of two-row partitions in normal-form Corners. 
+
+**Exercise 21:** Use induction to prove your conjecture from Exercise 20. 
+
+**Exercise 22:** Use data to formulate a conjecture characterizing the $\p/\n$-status of hooks in normal-form Corners. 
+
+**Exercise 23:** Use induction to prove your conjecture from Exercise 22. 
+
+## Conclusion
+We have seen that various proof techniques can be used to better understand how to play combinatorial games and win. This is just the tip of the iceberg as there are many other combinatorial games and additional proof techniques that are used in their study.
