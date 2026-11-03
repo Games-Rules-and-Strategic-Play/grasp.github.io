@@ -1,6 +1,6 @@
 <style>
 .md-sidebar--secondary {
-  display: none !important;
+  display: block !important;
 }
 </style>
 

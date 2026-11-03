@@ -201,7 +201,7 @@ Kvadratek Youngovega diagrama imenujemo *vogal*, če pod njim ali desno od njega
 
 V prejšnjem modulu ste spoznali nekatere preproste kombinatorične igre. V tem modulu bomo videli, kako se lahko nekatere tehnike dokazovanja, ki jih bomo preučevali, uporabijo za dokazovanje izrekov o teh igrah. Kot bomo videli, je indukcija v tem kontekstu še posebej močna, tako kot povsod v kombinatoriki.
 
-Ko igrate igro, je koristno vedeti, katere so $\p$-pozicije, saj so to tiste, ki jih želite prepustiti nasprotniku. Če jih poznate, lahko raziščete, ali katera od vaših potez vodi do takšne pozicije. Ne pozabite, da so $\n$-pozicije natanko tiste, pri katerih obstaja poteza v $\p$-pozicijo, medtem ko so $\p$-pozicije tiste brez takšne poteze; to boste uporabili v spodnjih nalogah.
+Ko igrate igro, je koristno vedeti, katere so $\mathcal{P}$-pozicije, saj so to tiste, ki jih želite prepustiti nasprotniku. Če jih poznate, lahko raziščete, ali katera od vaših potez vodi do takšne pozicije. Ne pozabite, da so $\mathcal{N}$-pozicije natanko tiste, pri katerih obstaja poteza v $\mathcal{P}$-pozicijo, medtem ko so $\mathcal{P}$-pozicije tiste brez takšne poteze; to boste uporabili v spodnjih nalogah.
 
 Pri nekaterih igrah ni pretežko okarakterizirati izgubljenih pozicij. Na primer, pri igri $S_{\{1, 2, 3\}}$ smo videli močne dokaze (vendar še ne formalnega dokaza -- ostanite z nami), da so izgubljene pozicije natanko tiste kopice, pri katerih je število žetonov deljivo s štiri. Za Nim in LCTR je takšna karakterizacija mogoča, a nekoliko bolj zapletena. Kljub temu je mogoče brez prevelikega truda priti do nekaterih bolj omejenih rezultatov.
 
@@ -215,25 +215,25 @@ Spomnimo se, da pri igri $S_{\{1, 2, 3\}}$ igralca izmenično jemljeta 1, 2 ali 
 
 Spomnimo se, da je pri Nimu pozitivno število kopic žetonov. Igralca izmenično izbirata kopico in iz nje vzameta pozitivno število žetonov. Začeli bomo z nekaj preprostimi rezultati za normalno igro Nim. Te lahko ugotovimo z neposrednim dokazom.
 
-**Naloga 2:** Naj bo $n \in \mathbb Z_{>0}$. Dokažite, da je v normalni igri Nim, $n$ v $\n$.
+**Naloga 2:** Naj bo $n \in \mathbb Z_{>0}$. Dokažite, da je v normalni igri Nim, $n$ v $\mathcal{N}$.
 
-**Naloga 3:** Naj bo $n \in \mathbb Z_{>0}$. Navedite in dokažite potreben in zadosten pogoj, da je $1/n$ v $\p$ v normalni igri Nim.
+**Naloga 3:** Naj bo $n \in \mathbb Z_{>0}$. Navedite in dokažite potreben in zadosten pogoj, da je $1/n$ v $\mathcal{P}$ v normalni igri Nim.
 
-**Naloga 4:** Dokažite, da je v normalni igri Nim, $2/2$ v $\n$.
+**Naloga 4:** Dokažite, da je v normalni igri Nim, $2/2$ v $\mathcal{N}$.
 
-**Naloga 5:** Naj bo $n \in \mathbb Z_{>0}$. Navedite in dokažite potreben in zadosten pogoj, da je $2/n$ v $\p$ v normalni igri Nim.
+**Naloga 5:** Naj bo $n \in \mathbb Z_{>0}$. Navedite in dokažite potreben in zadosten pogoj, da je $2/n$ v $\mathcal{P}$ v normalni igri Nim.
 
 Nato obravnavamo nekaj problemov, ki zahtevajo uporabo indukcije.
 
-**Naloga 6:** Navedite domnevo, ki karakterizira dvokopične pozicije v normalni igri Nim, ki so v $\p$.
+**Naloga 6:** Navedite domnevo, ki karakterizira dvokopične pozicije v normalni igri Nim, ki so v $\mathcal{P}$.
 
 **Naloga 7:** Uporabite indukcijo, da dokažete svojo domnevo iz Naloge 6.
 
-**Naloga 8:** Navedite domnevo za normalno igro Nim, ki podaja zadosten pogoj, da je pozicija s sodim številom kopic v $\p$.
+**Naloga 8:** Navedite domnevo za normalno igro Nim, ki podaja zadosten pogoj, da je pozicija s sodim številom kopic v $\mathcal{P}$.
 
 **Naloga 9:** Uporabite indukcijo, da dokažete svojo domnevo iz Naloge 8.
 
-**Naloga 10:** Ali je pogoj v vaši domnevi iz Naloge 8 tudi potreben za pripadnost $\p$? Pojasnite.
+**Naloga 10:** Ali je pogoj v vaši domnevi iz Naloge 8 tudi potreben za pripadnost $\mathcal{P}$? Pojasnite.
 
 ### Nekaj rezultatov za LCTR
 

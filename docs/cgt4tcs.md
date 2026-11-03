@@ -202,7 +202,7 @@ A square of a Young diagram is called a *corner* if there is no square below it 
 
 In the last module, you learned about some simple combinatorial games. In this module, we will see how some of the proof techniques we will study can be used to prove theorems about these games. As we will see, induction is particularly powerful in this context, as it is throughout combinatorics. 
 
-When playing a game it is helpful to know what the $\p$-positions are, since these are the ones you want to leave to your opponent. If you know them, then you can investigate whether any of your moves result in such a position. Remember that $\n$-positions are precisely those with a move to a $\p$-position, while $\p$-positions are those positions with no such move; you will use this in the exercises below.
+When playing a game it is helpful to know what the $\mathcal{P}$-positions are, since these are the ones you want to leave to your opponent. If you know them, then you can investigate whether any of your moves result in such a position. Remember that $\mathcal{N}$-positions are precisely those with a move to a $\mathcal{P}$-position, while $\mathcal{P}$-positions are those positions with no such move; you will use this in the exercises below.
 
 In some games, it's not too hard to characterize the losing positions. For example, in $S_{\{1, 2, 3\}}$, we saw strong evidence (but not proof -- stay tuned) that the losing positions are precisely those heaps for which the number of tokens is divisible by four. For Nim and LCTR, such a characterization is possible but a bit involved. However, some more restricted results can be obtained without too much effort. 
 
@@ -216,25 +216,25 @@ Recall that in $S_{\{1, 2, 3\}}$, players take turns removing 1, 2, or 3 tokens 
 
 Recall that in Nim there are a positive number of heaps of tokens. Players alternate choosing a heap and removing a positive number of tokens. We begin with some simple results for normal-play Nim. These can be established by direct proof. 
 
-**Exercise 2:** Let $n \in \mathbb Z_{>0}$. Prove that in normal-play Nim, $n$ is in $\n$. 
+**Exercise 2:** Let $n \in \mathbb Z_{>0}$. Prove that in normal-play Nim, $n$ is in $\mathcal{N}$. 
 
-**Exercise 3:** Let $n \in \mathbb Z_{>0}$. State and prove a necessary and sufficient condition for $1/n$ to be in $\p$ in normal-play Nim. 
+**Exercise 3:** Let $n \in \mathbb Z_{>0}$. State and prove a necessary and sufficient condition for $1/n$ to be in $\mathcal{P}$ in normal-play Nim. 
 
-**Exercise 4:** Prove that in normal-play Nim, $2/2$ is in $\n$. 
+**Exercise 4:** Prove that in normal-play Nim, $2/2$ is in $\mathcal{N}$. 
 
-**Exercise 5:** Let $n \in \mathbb Z_{>0}$. State and prove a necessary and sufficient condition for $2/n$ to be in $\p$ in normal-play Nim. 
+**Exercise 5:** Let $n \in \mathbb Z_{>0}$. State and prove a necessary and sufficient condition for $2/n$ to be in $\mathcal{P}$ in normal-play Nim. 
 
 Next we consider some problems that require the use of induction. 
 
-**Exercise 6:** State a conjecture characterizing the two-heap positions in normal-play Nim that are in $\p$. 
+**Exercise 6:** State a conjecture characterizing the two-heap positions in normal-play Nim that are in $\mathcal{P}$. 
 
 **Exercise 7:** Use induction to prove your conjecture from Exercise 6. 
 
-**Exercise 8:** State a conjecture for normal-play Nim giving a sufficient condition for a position with an even number of heaps to be in $\p$. 
+**Exercise 8:** State a conjecture for normal-play Nim giving a sufficient condition for a position with an even number of heaps to be in $\mathcal{P}$. 
 
 **Exercise 9:** Use induction to prove your conjecture from Exercise 8. 
 
-**Exercise 10:** Is the condition in your conjecture from Exercise 8 also necessary for membership in $\p$? Explain.  
+**Exercise 10:** Is the condition in your conjecture from Exercise 8 also necessary for membership in $\mathcal{P}$? Explain.  
 
 ### Some Results on LCTR
 
