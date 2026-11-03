@@ -10,7 +10,7 @@
 }
 </style>
 
-# Modul 1: Nekatere kombinatorične igre na particijah
+## Modul 1: Nekatere kombinatorične igre na particijah
 
 **Teoretično računalništvo I**
 
@@ -26,7 +26,7 @@ V tem semestru bomo s teorijo kombinatoričnih iger ponazorili teme, ki jih bomo
 
 ---
 
-## Odštevanje: »preprosta« kombinatorična igra
+### Odštevanje: »preprosta« kombinatorična igra
 
 Predpostavimo, da imate kupček s 30 žetoni. Prijatelja Peter in Nina izmenično odstranjujeta 1, 2 ali 3 žetone s kupčka. Nina začne. Zmaga igralec, ki zadnji vzame žeton. Ali ima kateri od igralcev zmagovalno strategijo? Če jo ima, kateri in kako naj igra?
 
@@ -78,7 +78,7 @@ Ta razdelek zaključimo s pomembnim opažanjem, ki je uporabno pri analizi **Od�
 
 ---
 
-## Nim
+### Nim
 
 V igri **Nim** začnemo z več kupčki žetonov. Igralca izmenično izbereta enega od kupčkov in z njega odstranita poljubno pozitivno število žetonov. Položaj s $k$ kupčki, pri katerem $j$-ti kupček vsebuje $n_j$ žetonov, označimo z $n_1/\ldots/n_k$.
 
@@ -96,7 +96,7 @@ V igri **Nim** začnemo z več kupčki žetonov. Igralca izmenično izbereta ene
 
 ---
 
-## Particije in Youngovi diagrami
+### Particije in Youngovi diagrami
 
 V zadnjih letih smo[^2] preučevali različne kombinatorične igre na particijah celih števil. Pri tem predmetu boste spoznali nekatere od teh iger in načine, kako se pri njihovem preučevanju uporabljajo nekatere teme tega predmeta. Preden lahko igre opišemo, se moramo pogovoriti o particijah in Youngovih diagramih.
 
@@ -136,7 +136,7 @@ Iz Youngovega diagrama $\lambda$ s $k$ vrsticami lahko sestavimo nov Youngov dia
 
 ---
 
-## LCTR
+### LCTR
 
 Oglejmo si kombinatorično igro **LCTR** na $\mathbb{Y}$, v kateri igralca izmenično odstranjujeta bodisi skrajno levi stolpec bodisi zgornjo vrstico dane particije $\lambda$, dokler ne dosežeta prazne particije (ki je končni položaj). Študentka Univerze na Primorskem Jelena Ilić je igro **LCTR** preučevala v okviru svojega diplomskega projekta.
 
@@ -157,7 +157,7 @@ Za igro z lastnostjo, omenjeno v Vaji 7, pravimo, da je *konjugatno invariantna*
 
 ---
 
-## CRIM
+### CRIM
 
 V igri **LCTR** smemo odstraniti le skrajno levi stolpec ali zgornjo vrstico Youngovega diagrama. Kaj pa, če lahko igralca odstranita poljubno vrstico ali stolpec, pri čemer velja, da se preostali deli Youngovega diagrama združijo, če odstranjena vrstica ali stolpec ni niti prvi niti zadnji? To igro imenujemo **CRIM** oziroma *column-row impartial merge*; glejte Sliko 2.
 
@@ -178,7 +178,7 @@ V igri **LCTR** smemo odstraniti le skrajno levi stolpec ali zgornjo vrstico You
 
 ---
 
-## Vogali
+### Vogali
 
 Kvadratek Youngovega diagrama imenujemo *vogal*, če pod njim ali desno od njega ni nobenega kvadratka. V igri **Vogali** igralca izmenično odstranjujeta neprazno podmnožico vogalov particije; glejte Sliko 3.
 
@@ -197,7 +197,7 @@ Kvadratek Youngovega diagrama imenujemo *vogal*, če pod njim ali desno od njega
 
 **Vaja 11.** Ali je igra **Vogali** konjugatno invariantna? Zakaj oziroma zakaj ne?
 
-# Modul 2
+## Modul 2
 
 V prejšnjem modulu ste spoznali nekatere preproste kombinatorične igre. V tem modulu bomo videli, kako se lahko nekatere tehnike dokazovanja, ki jih bomo preučevali, uporabijo za dokazovanje izrekov o teh igrah. Kot bomo videli, je indukcija v tem kontekstu še posebej močna, tako kot povsod v kombinatoriki.
 
@@ -205,13 +205,13 @@ Ko igrate igro, je koristno vedeti, katere so $\p$-pozicije, saj so to tiste, ki
 
 Pri nekaterih igrah ni pretežko okarakterizirati izgubljenih pozicij. Na primer, pri igri $S_{\{1, 2, 3\}}$ smo videli močne dokaze (vendar še ne formalnega dokaza -- ostanite z nami), da so izgubljene pozicije natanko tiste kopice, pri katerih je število žetonov deljivo s štiri. Za Nim in LCTR je takšna karakterizacija mogoča, a nekoliko bolj zapletena. Kljub temu je mogoče brez prevelikega truda priti do nekaterih bolj omejenih rezultatov.
 
-## Izgubljene pozicije v $S_{\{1, 2, 3\}}$
+### Izgubljene pozicije v $S_{\{1, 2, 3\}}$
 
 Spomnimo se, da pri igri $S_{\{1, 2, 3\}}$ igralca izmenično jemljeta 1, 2 ali 3 žetone iz ene kopice. Sedaj imate orodja za dokaz naše domneve, da so izgubljene pozicije v normalni igri $S_{\{1, 2, 3\}}$ natanko tiste, pri katerih je število žetonov v kopici večkratnik števila štiri.
 
 **Naloga 1:** Z indukcijo dokažite, da je pozicija v normalni igri $S_{\{1, 2, 3\}}$ izgubljena natanko tedaj, ko je število žetonov v kopici večkratnik števila štiri.
 
-## Nekaj rezultatov za Nim
+### Nekaj rezultatov za Nim
 
 Spomnimo se, da je pri Nimu pozitivno število kopic žetonov. Igralca izmenično izbirata kopico in iz nje vzameta pozitivno število žetonov. Začeli bomo z nekaj preprostimi rezultati za normalno igro Nim. Te lahko ugotovimo z neposrednim dokazom.
 
@@ -235,7 +235,7 @@ Nato obravnavamo nekaj problemov, ki zahtevajo uporabo indukcije.
 
 **Naloga 10:** Ali je pogoj v vaši domnevi iz Naloge 8 tudi potreben za pripadnost $\p$? Pojasnite.
 
-## Nekaj rezultatov za LCTR
+### Nekaj rezultatov za LCTR
 
 Spomnimo se, da je LCTR igra na particijah, pri kateri igralca izmenično odstranjujeta bodisi skrajni levi stolpec bodisi zgornjo vrstico ustreznega Youngovega diagrama. Obravnavali bomo nekaj rezultatov, ki jih je mogoče neposredno dokazati, vendar najprej potrebujemo nekaj terminologije.
 
@@ -255,7 +255,7 @@ Naslednji dve nalogi (in morda tudi prejšnje) bosta lažji z nekaj primeri pred
 
 **Naloga 15:** Posplošite svoj rezultat, ali pa del rezultata, iz Naloge 14 na particije, ki niso samokonjugirane.
 
-## Nekaj rezultatov za CRIM
+### Nekaj rezultatov za CRIM
 
 Spomnimo se, da pri igri CRIM igralca izmenično odstranjujeta eno vrstico ali stolpec iz Youngovega diagrama particije. Če vrstica ali stolpec ni ne prvi ne zadnji, se preostala dela Youngovega diagrama združita. Začnemo z rezultatom za normalno igro CRIM, ki ga lahko neposredno dokažemo.
 
@@ -269,7 +269,7 @@ Preostali rezultati zahtevajo indukcijo.
 
 **Naloga 19:** Oblikujte domnevo za $\p/\n$-status stopnišč v normalni igri CRIM.
 
-## Nekaj rezultatov za Corners
+### Nekaj rezultatov za Corners
 
 Spomnimo se, da pri igri Corners igralca izmenično odstranjujeta neprazne množice vogalov iz Youngovega diagrama particije.
 
@@ -281,5 +281,5 @@ Spomnimo se, da pri igri Corners igralca izmenično odstranjujeta neprazne množ
 
 **Naloga 23:** Uporabite indukcijo, da dokažete svojo domnevo iz Naloge 22.
 
-## Zaključek
+### Zaključek
 Videli smo, da se lahko različne tehnike dokazovanja uporabijo za boljše razumevanje, kako igrati kombinatorične igre in zmagati. To je le vrh ledene gore, saj obstaja še veliko drugih kombinatoričnih iger in dodatnih tehnik dokazovanja, ki se uporabljajo pri njihovem preučevanju.

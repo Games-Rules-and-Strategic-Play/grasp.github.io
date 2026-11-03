@@ -10,7 +10,7 @@
 }
 </style>
 
-# Module 1: Some Combinatorial Games on Partitions
+## Module 1: Some Combinatorial Games on Partitions
 
 **Theoretical Computer Science I**
 
@@ -26,7 +26,7 @@ This semester, we will use combinatorial game theory to illustrate the topics we
 
 ---
 
-## Subtraction: a "simple" combinatorial game
+### Subtraction: a "simple" combinatorial game
 
 Suppose you have a pile of 30 tokens. Two friends Peter and Nina take turns removing 1, 2, or 3 tokens from the pile. Nina goes first. The last player to pick up a token wins. Does one of the players have a winning strategy? If so, which one, and how should they play?
 
@@ -78,7 +78,7 @@ We conclude this section with an important observation that is useful for analyz
 
 ---
 
-## Nim
+### Nim
 
 In the game of **Nim**, we begin with several piles of tokens. Players take turns selecting one of the piles, then removing any positive number of tokens from that pile. We denote the position with $k$ piles in which the $j$-th pile contains $n_j$ tokens by $n_1/\ldots/n_k$.
 
@@ -96,7 +96,7 @@ In the game of **Nim**, we begin with several piles of tokens. Players take turn
 
 ---
 
-## Partitions and Young diagrams
+### Partitions and Young diagrams
 
 In recent years, we[^2] have studied a variety of combinatorial games on integer partitions. In this class, you will learn about some of these games and how some of the topics you learn about in this class are used in studying them. Before we can describe the games, we need to talk about partitions and Young diagrams.
 
@@ -136,7 +136,7 @@ While many combinatorial objects are counted by tidy formulae, this is not the c
 
 ---
 
-## LCTR
+### LCTR
 
 Consider the combinatorial game **LCTR** played on $\mathbb{Y}$ in which players take turns removing either the Leftmost Column or Topmost Row of a given partition $\lambda$ until they reach the empty partition (which is terminal). University of Primorska student Jelena Ilić studied **LCTR** for her senior project.
 
@@ -157,7 +157,7 @@ A game with the property mentioned in Exercise 7 is said to be *conjugate-invari
 
 ---
 
-## CRIM
+### CRIM
 
 In **LCTR**, we are allowed to remove only the leftmost Column or the topmost row of a Young diagram. What if players can remove any row or column, with the stipulation that if the row or column removed is neither the first nor the last, then the remaining parts of the Young diagram are merged together? We refer to this game as **CRIM**, or *column-row impartial merge*; see Figure 2.
 
@@ -178,7 +178,7 @@ In **LCTR**, we are allowed to remove only the leftmost Column or the topmost ro
 
 ---
 
-## Corners
+### Corners
 
 A square of a Young diagram is called a *corner* if there is no square below it or to its right. In the game **Corners**, players take turns removing a nonempty subset of the corners of a partition; see Figure 3.
 
@@ -198,7 +198,7 @@ A square of a Young diagram is called a *corner* if there is no square below it 
 **Exercise 11.** Is **Corners** conjugate-invariant? Why or why not?
 
 
-# Module 2
+## Module 2
 
 In the last module, you learned about some simple combinatorial games. In this module, we will see how some of the proof techniques we will study can be used to prove theorems about these games. As we will see, induction is particularly powerful in this context, as it is throughout combinatorics. 
 
@@ -206,13 +206,13 @@ When playing a game it is helpful to know what the $\p$-positions are, since the
 
 In some games, it's not too hard to characterize the losing positions. For example, in $S_{\{1, 2, 3\}}$, we saw strong evidence (but not proof -- stay tuned) that the losing positions are precisely those heaps for which the number of tokens is divisible by four. For Nim and LCTR, such a characterization is possible but a bit involved. However, some more restricted results can be obtained without too much effort. 
 
-## Losing Positions in $S_{\{1, 2, 3\}}$
+### Losing Positions in $S_{\{1, 2, 3\}}$
 
 Recall that in $S_{\{1, 2, 3\}}$, players take turns removing 1, 2, or 3 tokens from a single heap. Now you have the tools to prove our conjecture that the losing positions in normal-play $S_{\{1, 2, 3\}}$ are precisely those for which the number of tokens in the heap is divisible by four.  
 
 **Exercise 1:** Use induction to prove that a position in normal-play $S_{\{1, 2, 3\}}$ is losing if and only if the number of tokens in the heap is a multiple of four. 
 
-## Some results on Nim
+### Some results on Nim
 
 Recall that in Nim there are a positive number of heaps of tokens. Players alternate choosing a heap and removing a positive number of tokens. We begin with some simple results for normal-play Nim. These can be established by direct proof. 
 
@@ -236,7 +236,7 @@ Next we consider some problems that require the use of induction.
 
 **Exercise 10:** Is the condition in your conjecture from Exercise 8 also necessary for membership in $\p$? Explain.  
 
-## Some Results on LCTR
+### Some Results on LCTR
 
 Recall that LCTR is a game on partitions in which the players take turns removing either the leftmost column or topmost row of the corresponding Young diagram. We will consider some results that can be established directly, but first we need some terminology. 
 
@@ -256,7 +256,7 @@ The next two exercises (and maybe the previous ones too) will be easier with som
 
 **Exercise 15:** Generalize your result, or part of it, from Exercise 14 to partitions that are not self-conjugate. 
 
-## Some results on CRIM
+### Some results on CRIM
 
 Recall that in CRIM, players take turns removing a single row or column from the Young diagram of a partition. If the row or column is neither the first nor the last, then the two parts of the Young diagram are merged. We begin with a result for normal-form CRIM that can be proved directly. 
 
@@ -270,7 +270,7 @@ The remaining results require induction.
 
 **Exercise 19:** Formulate a conjecture for the $\p/\n$-status of staircases in normal-form CRIM.
 
-## Some results on Corners
+### Some results on Corners
 
 Recall that in Corners, players alternate removing nonempty sets of corners from the Young diagram of a partition. 
 
@@ -282,5 +282,5 @@ Recall that in Corners, players alternate removing nonempty sets of corners from
 
 **Exercise 23:** Use induction to prove your conjecture from Exercise 22. 
 
-## Conclusion
+### Conclusion
 We have seen that various proof techniques can be used to better understand how to play combinatorial games and win. This is just the tip of the iceberg as there are many other combinatorial games and additional proof techniques that are used in their study.
