@@ -4,6 +4,9 @@
 .md-content__inner.md-typeset,
 .md-content__inner.md-typeset :not(code, code *, pre, pre *, mjx-container, mjx-container *) {
     font-family: "Inter Tight", sans-serif !important;
+},
+.md-sidebar--secondary {
+  display: block !important;
 }
 </style>
 
