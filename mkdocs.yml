@@ -44,6 +44,7 @@ plugins:
       bib_file: "docs/publications.bib"
 
 markdown_extensions:
+  - toc
   - footnotes
   - tables
   - pymdownx.arithmatex:
