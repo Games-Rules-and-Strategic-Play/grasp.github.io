@@ -220,7 +220,7 @@ Recall that in Nim there are a positive number of heaps of tokens. Players alter
 
 **Exercise 3:** Let $n \in \mathbb Z_{>0}$. State and prove a necessary and sufficient condition for $1/n$ to be in $\mathcal{P}$ in normal-play Nim. 
 
-**Exercise 4:** Prove that in normal-play Nim, $2/2$ is in $\mathcal{N}$. 
+**Exercise 4:** Prove that in normal-play Nim, $2/2$ is in $\mathcal{P}$. 
 
 **Exercise 5:** Let $n \in \mathbb Z_{>0}$. State and prove a necessary and sufficient condition for $2/n$ to be in $\mathcal{P}$ in normal-play Nim. 
 

@@ -30,5 +30,6 @@ We extend classical Nim and subtraction games into richer combinatorial settings
 ## Explore the Lab
 
 - 📑 **[Research & Publications](research.md)** – Peer-reviewed articles and preprints.
+- 🔬 **[Research Problems for Students](open-research.md)** – New games on Young diagrams and project directions.
 - 👥 **[Meet the Team](team.md)** – Our international network of collaborators.
 - 🎮 **[Play Our Games](play.md)** – Interactive implementations of partition games.
