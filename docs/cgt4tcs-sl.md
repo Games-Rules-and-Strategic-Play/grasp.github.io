@@ -269,15 +269,15 @@ Preostali rezultati zahtevajo indukcijo.
 
 **Naloga 19:** Oblikujte domnevo za $\mathcal{P}/\mathcal{N}$-status stopnišč v normalni igri CRIM.
 
-### Nekaj rezultatov za Corners
+### Nekaj rezultatov za Vogale
 
-Spomnimo se, da pri igri Corners igralca izmenično odstranjujeta neprazne množice vogalov iz Youngovega diagrama particije.
+Spomnimo se, da pri igri Vogali igralca izmenično odstranjujeta neprazne množice vogalov iz Youngovega diagrama particije.
 
-**Naloga 20:** Uporabite podatke za oblikovanje domneve, ki karakterizira $\mathcal{P}/\mathcal{N}$-status dvovrstičnih particij v normalni igri Corners.
+**Naloga 20:** Uporabite podatke za oblikovanje domneve, ki karakterizira $\mathcal{P}/\mathcal{N}$-status dvovrstičnih particij v normalni igri Vogali.
 
 **Naloga 21:** Uporabite indukcijo, da dokažete svojo domnevo iz Naloge 20.
 
-**Naloga 22:** Uporabite podatke za oblikovanje domneve, ki karakterizira $\mathcal{P}/\mathcal{N}$-status kljuk v normalni igri Corners.
+**Naloga 22:** Uporabite podatke za oblikovanje domneve, ki karakterizira $\mathcal{P}/\mathcal{N}$-status kljuk v normalni igri Vogali.
 
 **Naloga 23:** Uporabite indukcijo, da dokažete svojo domnevo iz Naloge 22.
 
