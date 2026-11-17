@@ -295,7 +295,7 @@ Celoštevilske particije so pomembne na številnih področjih matematike, vklju�
 Kartezični produkti ponujajo en način za to; našo particijo lahko kodiramo s pomočjo $6$-terice $(3,1,5,1,3,3)$. Vsako particijo lahko predstavimo kot $k$-terico pozitivnih celih števil za nek $k$.
 
 **Naloga 1:** Predstavite naslednje particije kot $k$-terice za neko nenegativno celo število $k$.
-$$1 + 2 + 3, \quad 3 + 1 + 2, \quad 1 + 1 + 1 + 1 + 1 + 1, \quad 6, \quad \text{Edina particija števila } 0$$
+$1 + 2 + 3$, $3 + 1 + 2$, $1 + 1 + 1 + 1 + 1 + 1$, $6$, $\text{Edina particija števila } 0$.
 
 Želeli bi opisati množico $\mathbb Y$ celoštevilskih particij kot množico.
 
