@@ -295,7 +295,8 @@ Celoštevilske particije so pomembne na številnih področjih matematike, vklju�
 Kartezični produkti ponujajo en način za to; našo particijo lahko kodiramo s pomočjo $6$-terice $(3,1,5,1,3,3)$. Vsako particijo lahko predstavimo kot $k$-terico pozitivnih celih števil za nek $k$.
 
 **Naloga 1:** Predstavite naslednje particije kot $k$-terice za neko nenegativno celo število $k$.
-$1 + 2 + 3$, $3 + 1 + 2$, $1 + 1 + 1 + 1 + 1 + 1$, $6$, $\text{Edina particija števila } 0$.
+
+$$1 + 2 + 3, \quad 3 + 1 + 2, \quad 1 + 1 + 1 + 1 + 1 + 1, \quad 6, \quad \text{Edina particija števila } 0$$
 
 Želeli bi opisati množico $\mathbb Y$ celoštevilskih particij kot množico.
 
@@ -336,8 +337,11 @@ Vsaka kombinatorična igra vključuje množico pozicij $X$. Na primer, množica 
 ### Relacija potez
 
 Vsaka kombinatorična igra ima tudi množico potez, ki jih igralca smeta narediti. Relacije zagotavljajo matematični okvir za opis teh potez. Za igro z množico pozicij $S$ definiramo *relacijo potez* $\to$ kot množico
+
 $$\{(x, y) \in S^2 : \text{obstaja poteza iz } x \text{ v } y\}$$
+
 in pišemo $x \to y$, da označimo $(x, y) \in \to$. Na primer, v igri $S_{\{1,2,3\}}$ je relacija potez
+
 $$\{(x, y) \in \mathbb Z_{\geq 0}^2 : 1 \leq x-y \leq 3\}.$$
 
 **Naloga 13:** Kakšna je relacija potez za igro $S_{\{2, 5\}}$?
