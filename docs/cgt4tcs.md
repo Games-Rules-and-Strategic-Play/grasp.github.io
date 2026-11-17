@@ -284,3 +284,77 @@ Recall that in Corners, players alternate removing nonempty sets of corners from
 
 ### Conclusion
 We have seen that various proof techniques can be used to better understand how to play combinatorial games and win. This is just the tip of the iceberg as there are many other combinatorial games and additional proof techniques that are used in their study.
+
+## Module 3: Sets, Relations, and Combinatorial Games
+
+In this module, we will see some examples illustrating how relations are used in the context of combinatorial games. 
+
+### Partitions, Cartesian Products, and Equivalence
+
+Integer partitions are important in many areas of mathematics, including combinatorics, representation theory, number theory, and mathematical physics. Previously, we defined a partition of a nonnegative integer $n$ to be a way of writing $n$ as a sum of positive integers without regard to order. However, it is a bit inefficient to write, e.g., $3 + 1 + 5 + 1 + 3 + 3$; it would be nice if we had a more concise way to represent $\lambda$. 
+
+Cartesian products offer one way to do this; we can encode our partition using the $6$-tuple $(3,1,5,1,3,3)$. Every partition can be represented as a $k$-tuple of positive integers for some $k$. 
+
+**Exercise 1:** Represent the following partitions as $k$-tuples for some nonnegative integer $k$. 
+$$1 + 2 + 3, \quad 3 + 1 + 2, \quad 1 + 1 + 1 + 1 + 1 + 1, \quad 6, \quad \text{The unique partition of } 0$$
+
+We would like a way to describe the set $\mathbb Y$ of integer partitions as a set. 
+
+**Exercise 2:** Describe the set of partitions with $k$ parts using set-theoretic operations studied in class. Hint: for a set $S$, let $S^k = \underbrace{S \times \cdots \times S}_{k~\text{times}}$. 
+
+**Exercise 3:** Describe the set of partitions using set-theoretic operations studied in class.  
+
+So far we haven't addressed the part of the definition of partitions that says "without regard to order;" we will do so now. In Exercise 1, you were asked to represent both $1 + 2 + 3$ and $3 + 1 + 2$ as $k$-tuples. Of course, these represent the same partition because they have the same parts, just in different orders. 
+
+**Exercise 4:** Define an equivalence relation on the set of $k$-tuples of positive integers in which $(1,2,3)$ and $(3,1,2)$ are equivalent to each other but not to, e.g., $(1,4,1)$. 
+
+**Exercise 5:** Write down the equivalence classes of $(1,2,3)$ and $(1,4,1)$ under the equivalence relation defined in Exercise 4. 
+
+We can use any element of an equivalence class to represent the entire equivalence class. Often, we'll look for a consistent way to choose an element to represent the equivalence class. Such an element is called a *canonical representative*. We require that the convention we choose causes every equivalence class to have a unique canonical representative. 
+
+For example, when representing a rational number, we often use the ratio of integers in which the numerator and denominator have no common prime factor and the denominator is positive. Under this convention, $-1/2$ is the canonical representative of its equivalence class, which also includes $2/-4, -3/6, -93/186$, and so on. 
+
+As discussed in Module 1, we normally write the parts of a partition in nonincreasing order. 
+
+**Exercise 6:** What are the canonical representatives of the equivalence classes discussed in Exercise 5? 
+
+**Exercise 7:** Explain why every equivalence class determined by the equivalence relation defined in Exercise 4 has a unique canonical representative.  
+
+### The Set of Positions
+
+Every combinatorial game includes a set $X$ of positions. For example, the set of positions of $S_{\{1, 2, 3\}}$ is $\mathbb Z_{\geq 0}$. 
+
+**Exercise 8:** Describe the set of positions of $S_{\{2, 5\}}$. 
+
+**Exercise 9:** Describe the set of positions of Nim using the set-theoretic operations we discussed in class. 
+
+**Exercise 10:** Describe the set of positions of LCTR.
+
+**Exercise 11:** Describe the set of positions of CRIM.
+
+**Exercise 12:** Describe the set of positions of Corners. 
+
+### The Move Relation
+
+Every combinatorial game also has a set of moves that players are allowed to make. Relations provide a mathematical framework for describing these moves. For a game with position set $S$, we define the *move relation* $\to$ to be the set 
+$$\{(x, y) \in S^2 : \text{there is a move from } x \text{ to } y\}$$
+and write $x \to y$ to indicate that $(x, y) \in \to$. For example, in $S_{\{1,2,3\}}$, the move relation is 
+$$\{(x, y) \in \mathbb Z_{\geq 0}^2 : 1 \leq x-y \leq 3\}.$$
+
+**Exercise 13:** What is the move relation for $S_{\{2, 5\}}$? 
+
+**Exercise 14:** Give an example of two elements and two non-elements of the move relation for Nim. 
+
+**Exercise 15:** Give an example of two elements and two non-elements of the move relation for LCTR. 
+
+**Exercise 16:** Give an example of two elements and two non-elements of the move relation for CRIM. 
+
+**Exercise 17:** Give an example of two elements and two non-elements of the move relation for Corners. 
+
+**Exercise 18:** In a game with move relation $\to$, what does the composition $\to^2 = \to \circ \to$ represent? Generalize. 
+
+**Exercise 19:** In a game with move relation $\to$, what does the inverse $\to^{-1}$ represent? 
+
+### Conclusion
+
+We have seen that sets and relations can be used to describe partitions as well as the positions and moves in any combinatorial game. In coming modules, be on the lookout for additional applications of these notions to the combinatorial games we study.

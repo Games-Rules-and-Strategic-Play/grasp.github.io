@@ -283,3 +283,77 @@ Spomnimo se, da pri igri Vogali igralca izmenično odstranjujeta neprazne množi
 
 ### Zaključek
 Videli smo, da se lahko različne tehnike dokazovanja uporabijo za boljše razumevanje, kako igrati kombinatorične igre in zmagati. To je le vrh ledene gore, saj obstaja še veliko drugih kombinatoričnih iger in dodatnih tehnik dokazovanja, ki se uporabljajo pri njihovem preučevanju.
+
+## Modul 3: Množice, relacije in kombinatorične igre
+
+V tem modulu si bomo ogledali nekaj primerov, ki ponazarjajo, kako se relacije uporabljajo v kontekstu kombinatoričnih iger.
+
+### Particije, kartezični produkti in ekvivalenca
+
+Celoštevilske particije so pomembne na številnih področjih matematike, vključno s kombinatoriko, teorijo upodobitev, teorijo števil in matematično fiziko. Predhodno smo particijo nenegativnega celega števila $n$ definirali kot način zapisa števila $n$ kot vsote pozitivnih celih števil brez upoštevanja vrstnega reda. Vendar pa je nekoliko neučinkovito pisati npr. $3 + 1 + 5 + 1 + 3 + 3$; lepo bi bilo, če bi imeli bolj jedrnat način za predstavitev $\lambda$.
+
+Kartezični produkti ponujajo en način za to; našo particijo lahko kodiramo s pomočjo $6$-terice $(3,1,5,1,3,3)$. Vsako particijo lahko predstavimo kot $k$-terico pozitivnih celih števil za nek $k$.
+
+**Naloga 1:** Predstavite naslednje particije kot $k$-terice za neko nenegativno celo število $k$.
+$$1 + 2 + 3, \quad 3 + 1 + 2, \quad 1 + 1 + 1 + 1 + 1 + 1, \quad 6, \quad \text{Edina particija števila } 0$$
+
+Želeli bi opisati množico $\mathbb Y$ celoštevilskih particij kot množico.
+
+**Naloga 2:** Opišite množico particij s $k$ deli z uporabo množično-teoretičnih operacij, ki smo jih obravnavali pri predavanjih. Namig: za množico $S$ naj bo $S^k = \underbrace{S \times \cdots \times S}_{k\text{-krat}}$.
+
+**Naloga 3:** Opišite množico vseh particij z uporabo množično-teoretičnih operacij, ki smo jih obravnavali pri predavanjih.
+
+Doslej se še nismo dotaknili tistega dela definicije particij, ki pravi »brez upoštevanja vrstnega reda«; to bomo storili zdaj. V Nalogi 1 ste morali tako $1 + 2 + 3$ kot $3 + 1 + 2$ predstaviti kot $k$-terici. Seveda ti predstavljata isto particijo, saj imata enake dele, le v različnem vrstnem redu.
+
+**Naloga 4:** Definirajte ekvivalenčno relacijo na množici $k$-teric pozitivnih celih števil, v kateri sta $(1,2,3)$ in $(3,1,2)$ med seboj ekvivalentni, nista pa ekvivalentni npr. $(1,4,1)$.
+
+**Naloga 5:** Zapišite ekvivalenčna razreda elementov $(1,2,3)$ in $(1,4,1)$ pri ekvivalenčni relaciji, definirani v Nalogi 4.
+
+Za predstavitev celotnega ekvivalenčnega razreda lahko uporabimo kateri koli njegov element. Pogosto iščemo dosleden način izbire elementa, ki predstavlja ekvivalenčni razred. Takemu elementu pravimo *kanonični predstavnik*. Zahtevamo, da izbrana konvencija zagotavlja, da ima vsak ekvivalenčni razred enoličnega kanoničnega predstavnika.
+
+Na primer, pri predstavitvi racionalnega števila pogosto uporabimo razmerje celih števil, v katerem števec in imenovalec nimata skupnega prafaktorja, imenovalec pa je pozitiven. Po tej konvenciji je $-1/2$ kanonični predstavnik svojega ekvivalenčnega razreda, ki vključuje tudi $2/-4, -3/6, -93/186$ in tako naprej.
+
+Kot smo obravnavali v Modulu 1, dele particije običajno zapišemo v nenaraščajočem vrstnem redu.
+
+**Naloga 6:** Kateri so kanonični predstavniki ekvivalenčnih razredov, obravnavanih v Nalogi 5?
+
+**Naloga 7:** Pojasnite, zakaj ima vsak ekvivalenčni razred, določen z ekvivalenčno relacijo iz Naloge 4, enoličnega kanoničnega predstavnika.
+
+### Množica pozicij
+
+Vsaka kombinatorična igra vključuje množico pozicij $X$. Na primer, množica pozicij igre $S_{\{1, 2, 3\}}$ je $\mathbb Z_{\geq 0}$.
+
+**Naloga 8:** Opišite množico pozicij igre $S_{\{2, 5\}}$.
+
+**Naloga 9:** Opišite množico pozicij igre Nim z uporabo množično-teoretičnih operacij, ki smo jih obravnavali pri predavanjih.
+
+**Naloga 10:** Opišite množico pozicij igre LCTR.
+
+**Naloga 11:** Opišite množico pozicij igre CRIM.
+
+**Naloga 12:** Opišite množico pozicij igre Corners.
+
+### Relacija potez
+
+Vsaka kombinatorična igra ima tudi množico potez, ki jih igralca smeta narediti. Relacije zagotavljajo matematični okvir za opis teh potez. Za igro z množico pozicij $S$ definiramo *relacijo potez* $\to$ kot množico
+$$\{(x, y) \in S^2 : \text{obstaja poteza iz } x \text{ v } y\}$$
+in pišemo $x \to y$, da označimo $(x, y) \in \to$. Na primer, v igri $S_{\{1,2,3\}}$ je relacija potez
+$$\{(x, y) \in \mathbb Z_{\geq 0}^2 : 1 \leq x-y \leq 3\}.$$
+
+**Naloga 13:** Kakšna je relacija potez za igro $S_{\{2, 5\}}$?
+
+**Naloga 14:** Navedite primer dveh elementov, ki pripadata relaciji potez za igro Nim, in dveh elementov, ki ji ne pripadata.
+
+**Naloga 15:** Navedite primer dveh elementov, ki pripadata relaciji potez za igro LCTR, in dveh elementov, ki ji ne pripadata.
+
+**Naloga 16:** Navedite primer dveh elementov, ki pripadata relaciji potez za igro CRIM, in dveh elementov, ki ji ne pripadata.
+
+**Naloga 17:** Navedite primer dveh elementov, ki pripadata relaciji potez za igro Corners, in dveh elementov, ki ji ne pripadata.
+
+**Naloga 18:** Kaj v igri z relacijo potez $\to$ predstavlja kompozitum $\to^2 = \to \circ \to$? Posplošite.
+
+**Naloga 19:** Kaj v igri z relacijo potez $\to$ predstavlja inverz $\to^{-1}$?
+
+### Zaključek
+
+Videli smo, da lahko množice in relacije uporabimo za opis particij ter pozicij in potez v kateri koli kombinatorični igri. V prihodnjih modulih bodite pozorni na dodatne uporabe teh pojmov pri kombinatoričnih igrah, ki jih preučujemo.
