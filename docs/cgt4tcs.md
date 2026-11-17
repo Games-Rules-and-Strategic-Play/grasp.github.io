@@ -296,6 +296,7 @@ Integer partitions are important in many areas of mathematics, including combina
 Cartesian products offer one way to do this; we can encode our partition using the $6$-tuple $(3,1,5,1,3,3)$. Every partition can be represented as a $k$-tuple of positive integers for some $k$. 
 
 **Exercise 1:** Represent the following partitions as $k$-tuples for some nonnegative integer $k$. 
+
 $$1 + 2 + 3, \quad 3 + 1 + 2, \quad 1 + 1 + 1 + 1 + 1 + 1, \quad 6, \quad \text{The unique partition of } 0$$
 
 We would like a way to describe the set $\mathbb Y$ of integer partitions as a set. 
@@ -337,8 +338,11 @@ Every combinatorial game includes a set $X$ of positions. For example, the set o
 ### The Move Relation
 
 Every combinatorial game also has a set of moves that players are allowed to make. Relations provide a mathematical framework for describing these moves. For a game with position set $S$, we define the *move relation* $\to$ to be the set 
+
 $$\{(x, y) \in S^2 : \text{there is a move from } x \text{ to } y\}$$
+
 and write $x \to y$ to indicate that $(x, y) \in \to$. For example, in $S_{\{1,2,3\}}$, the move relation is 
+
 $$\{(x, y) \in \mathbb Z_{\geq 0}^2 : 1 \leq x-y \leq 3\}.$$
 
 **Exercise 13:** What is the move relation for $S_{\{2, 5\}}$? 
