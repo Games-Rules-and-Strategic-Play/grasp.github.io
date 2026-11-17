@@ -242,17 +242,17 @@ Recall that LCTR is a game on partitions in which the players take turns removin
 
 A *row* is a partition of the form $[c]$, where $c \in \mathbb Z_{>0}$. A *column* is a partition of the form $[1^r]$, where $r \in \mathbb Z_{>0}$. A *hook* is a partition of the form $[c, 1^{r-1}]$, where $c \in \mathbb Z_{>0}$ and $r \in \mathbb Z_{>0}$. Notice that if $r=1$ then $[c, 1^{r-1}]$ is a row and if $c = 1$ then $[c, 1^{r-1}]$ is a column. We say that the hook $[c, 1^{r-1}]$ is *nondegenerate* if $c>1$ and $r>1$. 
 
-**Exercise 11:** Formulate and prove results about the $\p/\n$-status in normal-play LCTR of rows, columns, and nondegenerate hooks. 
+**Exercise 11:** Formulate and prove results about the $\mathcal P/\mathcal N$-status in normal-play LCTR of rows, columns, and nondegenerate hooks. 
 
 Next, we'll explore some examples in LCTR where induction is helpful. A *rectangle* is a partition of the form $[c^r]$, where $c \in \mathbb Z_{>0}$ and $r \in \mathbb Z_{>0}$. A *staircase* is a partition of the form $[n, n-1, \ldots, 2, 1]$ where $n \in \mathbb Z_{>0}$. 
 
-**Exercise 12:** Formulate and prove characterizations of the $\p/\n$-status of rectangles and staircases in normal-play LCTR. 
+**Exercise 12:** Formulate and prove characterizations of the $\mathcal P/\mathcal N$-status of rectangles and staircases in normal-play LCTR. 
 
-**Exercise 13:** Formulate and prove a characterization of the $\p/\n$-status of partitions with two parts in normal-play LCTR. 
+**Exercise 13:** Formulate and prove a characterization of the $\mathcal P/\mathcal N$-status of partitions with two parts in normal-play LCTR. 
 
 The next two exercises (and maybe the previous ones too) will be easier with some examples in front of you. I'll be happy to share some Mathematica code with you, or to run examples for you, to generate some data. You should have access to Mathematica through UP. 
 
-**Exercise 14:** Formulate and prove a result about the $\p/\n$-status of self-conjugate partitions in normal-play LCTR. 
+**Exercise 14:** Formulate and prove a result about the $\mathcal P/\mathcal N$-status of self-conjugate partitions in normal-play LCTR. 
 
 **Exercise 15:** Generalize your result, or part of it, from Exercise 14 to partitions that are not self-conjugate. 
 
@@ -260,25 +260,25 @@ The next two exercises (and maybe the previous ones too) will be easier with som
 
 Recall that in CRIM, players take turns removing a single row or column from the Young diagram of a partition. If the row or column is neither the first nor the last, then the two parts of the Young diagram are merged. We begin with a result for normal-form CRIM that can be proved directly. 
 
-**Exercise 16:** State and prove a characterization for the $\p/\n$-status of rows and columns in normal-form CRIM. 
+**Exercise 16:** State and prove a characterization for the $\mathcal P/\mathcal N$-status of rows and columns in normal-form CRIM. 
 
 The remaining results require induction. 
 
-**Exercise 17:** State and prove a characterization for the $\p/\n$-status of rectangles in normal-form CRIM. 
+**Exercise 17:** State and prove a characterization for the $\mathcal P/\mathcal N$-status of rectangles in normal-form CRIM. 
 
-**Exercise 18:** State and prove a characterization for the $\p/\n$-status of nondegenerate hooks in normal-form CRIM.
+**Exercise 18:** State and prove a characterization for the $\mathcal P/\mathcal N$-status of nondegenerate hooks in normal-form CRIM.
 
-**Exercise 19:** Formulate a conjecture for the $\p/\n$-status of staircases in normal-form CRIM.
+**Exercise 19:** Formulate a conjecture for the $\mathcal P/\mathcal N$-status of staircases in normal-form CRIM.
 
 ### Some results on Corners
 
 Recall that in Corners, players alternate removing nonempty sets of corners from the Young diagram of a partition. 
 
-**Exercise 20:** Use data to formulate a conjecture characterizing the $\p/\n$-status of two-row partitions in normal-form Corners. 
+**Exercise 20:** Use data to formulate a conjecture characterizing the $\mathcal P/\mathcal N$-status of two-row partitions in normal-form Corners. 
 
 **Exercise 21:** Use induction to prove your conjecture from Exercise 20. 
 
-**Exercise 22:** Use data to formulate a conjecture characterizing the $\p/\n$-status of hooks in normal-form Corners. 
+**Exercise 22:** Use data to formulate a conjecture characterizing the $\mathcal P/\mathcal N$-status of hooks in normal-form Corners. 
 
 **Exercise 23:** Use induction to prove your conjecture from Exercise 22. 
 
