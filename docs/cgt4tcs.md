@@ -1,3 +1,7 @@
+---
+title: TCS1 and Games
+---
+
 **English** · [Slovenščina](cgt4tcs-sl.md)
 
 <style>
@@ -291,7 +295,7 @@ In this module, we will see some examples illustrating how relations are used in
 
 ### Partitions, Cartesian Products, and Equivalence
 
-Integer partitions are important in many areas of mathematics, including combinatorics, representation theory, number theory, and mathematical physics. Previously, we defined a partition of a nonnegative integer $n$ to be a way of writing $n$ as a sum of positive integers without regard to order. However, it is a bit inefficient to write, e.g., $3 + 1 + 5 + 1 + 3 + 3$; it would be nice if we had a more concise way to represent $\lambda$. 
+Integer partitions are important in many areas of mathematics, including combinatorics, representation theory, number theory, and mathematical physics. Prev iously, we defined a partition of a nonnegative integer $n$ to be a way of writing $n$ as a sum of positive integers without regard to order. However, it is a bit inefficient to write, e.g., $3 + 1 + 5 + 1 + 3 + 3$; it would be nice if we had a more concise way to represent $\lambda$. 
 
 Cartesian products offer one way to do this; we can encode our partition using the $6$-tuple $(3,1,5,1,3,3)$. Every partition can be represented as a $k$-tuple of positive integers for some $k$. 
 

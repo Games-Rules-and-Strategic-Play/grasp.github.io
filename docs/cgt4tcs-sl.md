@@ -1,3 +1,7 @@
+---
+title: TOR1 in igre
+---
+
 **Slovenščina** · [English](cgt4tcs.md)
 
 <style>
